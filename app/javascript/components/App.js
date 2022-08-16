@@ -38,7 +38,7 @@ class App extends React.Component {
     console.log(sign_out_route)
     return (
       <Router>
-         <Header />
+         <Header {...this.props}/>
          <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/spotindex"  component={SpotIndex} />

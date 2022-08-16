@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Nav, NavItem } from 'reactstrap'
+import { Nav, NavItem, Button } from 'reactstrap'
 
 class Header extends Component {
   render() {
@@ -22,7 +22,7 @@ class Header extends Component {
               <a href='/' className="nav-link">Home</a>
             </NavItem>
           }
-
+          
           {/* About link for all users */}
           {
             <NavItem>
