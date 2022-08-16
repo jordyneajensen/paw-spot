@@ -18,7 +18,24 @@ import'./App.css'
 
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+
+      spots: [],
+      
+    }
+  }
   render () {
+    const {
+      logged_in,
+      current_user,
+      new_user_route,
+      sign_in_route,
+      sign_out_route
+    } = this.props
+    console.log(sign_in_route)
+    console.log(sign_out_route)
     return (
       <Router>
          <Header />
