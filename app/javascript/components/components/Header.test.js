@@ -20,14 +20,13 @@ describe("When Header renders", () => {
   let renderedHeader;
 
   beforeEach(() => {
-    renderedHeader = shallow(<Header />);
-  });
+    renderedHeader = shallow(<Header/>);
+  })
 
   it("displays a Home link", () => {
     const renderedHomeRoute = renderedHeader.find("[path='/']")
-
     expect(renderedHomeRoute.length).toEqual(1);
-  });
+  })
 })
 
 //   it("displays an About link", () => {
