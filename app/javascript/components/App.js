@@ -34,8 +34,7 @@ class App extends React.Component {
       sign_in_route,
       sign_out_route
     } = this.props
-    console.log(sign_in_route)
-    console.log(sign_out_route)
+    
     return (
       <Router>
          <Header {...this.props}/>
