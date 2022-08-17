@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle, Button, Col, Row } from 'reactstrap'
 
 class SpotIndex extends Component {
+    constructor(props) {
+        super(props)
+    }
   render() {
     return (
       <>
@@ -30,9 +33,8 @@ class SpotIndex extends Component {
                     </Col>
                 )
             })}
-        </Row>
-        <Row>
-            {!this.props.logged_in && (this.props.spots.length > 3 ? this.props.spots.slice(0,3) : this.props.spots).map(spot => {
+        
+            {this.props.spots && !this.props.logged_in && (this.props.spots.length > 3 ? this.props.spots.slice(0,3) : this.props.spots).map(spot => {
                 return(
                     <Col sm={4} key={spot.id}>
                         <Card >
