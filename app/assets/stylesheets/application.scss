@@ -1,3 +1,4 @@
+@import 'bootstrap';
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +14,22 @@
  *= require_tree .
  *= require_self
  */
+
+ .notFound-img {  
+    width: 1748px;
+    height: 926px;
+    top: 0;
+    left: 0;
+ }
+
+ .notFound-container {
+    position: relative;
+    text-align: center;
+ }
+
+ .notFound-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }

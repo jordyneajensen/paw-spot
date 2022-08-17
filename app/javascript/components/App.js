@@ -27,8 +27,8 @@ class App extends React.Component {
             <Route path="/spotindex"  component={SpotIndex} />
             <Route path="/spotshow"  component={SpotShow} />
             <Route path="/mySpots" component={ProtectedSpotIndex} />
-            <Route path="/apartmentnew" component={SpotNew} />
-            <Route path="/apartmentedit" component={SpotEdit} />
+            <Route path="/Spotnew" component={SpotNew} />
+            <Route path="/edit" component={SpotEdit} />
             <Route component={NotFound}/>
          </Switch>
          <Footer />
