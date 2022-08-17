@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Nav, NavItem, Button } from 'reactstrap'
+import { Nav, NavItem } from 'reactstrap'
 
 class Header extends Component {
   render() {
@@ -19,7 +19,7 @@ class Header extends Component {
           {/* Home page link for all users */}
           {
             <NavItem>
-              <a href='/' className="nav-link">Home</a>
+              <a href='/' id='home' className="nav-link">Home</a>
             </NavItem>
           }
           
@@ -38,7 +38,7 @@ class Header extends Component {
           }
 
           {/* Spot index(protected) link for logged in users */}
-          {!logged_in &&
+          {logged_in &&
           <NavItem>
             <a href='/spotindex' className="nav-link">View All Spots</a>
           </NavItem>
