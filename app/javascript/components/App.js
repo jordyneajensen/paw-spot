@@ -17,6 +17,7 @@ import {
 import'./App.css'
 
 
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -34,17 +35,19 @@ class App extends React.Component {
       sign_in_route,
       sign_out_route
     } = this.props
-    
+
     return (
       <Router>
          <Header {...this.props}/>
          <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" render={() => {
+              return <Home logged_in = {logged_in} sign_in_route = {sign_in_route} new_user_route = {new_user_route} />
+            }}  />
             <Route path="/spotindex"  component={SpotIndex} />
             <Route path="/spotshow"  component={SpotShow} />
-            <Route path="/mySpots" component={ProtectedSpotIndex} />
-            <Route path="/apartmentnew" component={SpotNew} />
-            <Route path="/apartmentedit" component={SpotEdit} />
+            <Route path="/myspots" component={ProtectedSpotIndex} />
+            <Route path="/spotnew" component={SpotNew} />
+            <Route path="/spotedit" component={SpotEdit} />
             <Route component={NotFound}/>
          </Switch>
          <Footer />
