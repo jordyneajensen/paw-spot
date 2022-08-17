@@ -21,19 +21,24 @@ import'./App.css'
 class App extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+
+      spots: [],
+      
+    }
   }
   render () {
     const {
-    logged_in,
-    current_user,
-    new_user_route,
-    sign_in_route,
-    sign_out_route
+      logged_in,
+      current_user,
+      new_user_route,
+      sign_in_route,
+      sign_out_route
     } = this.props
 
     return (
       <Router>
-         <Header />
+         <Header {...this.props}/>
          <Switch>
             <Route exact path="/" render={() => {
               return <Home logged_in = {logged_in} sign_in_route = {sign_in_route} new_user_route = {new_user_route} />
