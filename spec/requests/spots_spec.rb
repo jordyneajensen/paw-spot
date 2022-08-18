@@ -209,5 +209,50 @@ RSpec.describe "Spots", type: :request do
         spot = JSON.parse(response.body)
         expect(spot['image']).to include "can't be blank" 
       end     
-  end  
+  end
+  
+   describe "PATCH /update" do
+    
+      it"updates an existing spot" do
+        user = User.where(email: 'test@example.com').first_or_create(password: '12345678', password_confirmation: '12345678')
+    
+        spot_params ={
+          spot: {
+            name: "Buzz Coffee",
+            street: "123 other way",
+            city: "San Diego",
+            state: "CA",
+            zip: "22400",
+            description: "pet friendly spot one",
+            image:"https://images.hellogiggles.com/uploads/2017/06/23025549/coffeedoggettyimages-585356343-e1498237725281.jpg",
+            user_id: user.id  
+
+        }
+      }
+    
+      post '/spots', params: spot_params
+      spot = Spot.first
+
+      updated_spot_params = {
+        spot: {
+            name: "Buzz Coffee",
+            street: "123 other way",
+            city: "San Diego",
+            state: "california",
+            zip: "22400",
+            description: "pet friendly spot one",
+            image:"https://images.hellogiggles.com/uploads/2017/06/23025549/coffeedoggettyimages-585356343-e1498237725281.jpg",
+            user_id: user.id  
+
+        }
+      }
+
+        patch "/spots/#{spot.id}", params: updated_spot_params
+        updated_spot = Spot.find(spot.id)
+        expect(response).to have_http_status(200)
+        
+        expect(updated_spot.state).to eq "california"
+
+      end
+  end
 end

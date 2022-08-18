@@ -53,6 +53,19 @@ class App extends React.Component {
     .catch(errors => console.log("New spot Error", errors))
   }
 
+  updateSpot = (spot, id) => {
+    fetch(`/spots/${id}`,{
+      body: JSON.stringify(spot),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method:"PATCH"
+    })
+    .then(response => response.json())
+    .then(() => this.readSpot())
+    .catch(errors => console.log("Update spot errors", errors))
+  }
+
   render () {
     const {
       logged_in,
@@ -61,6 +74,8 @@ class App extends React.Component {
       sign_in_route,
       sign_out_route
     } = this.props
+
+    console.log(this.state)
 
     return (
       <Router>
@@ -75,7 +90,16 @@ class App extends React.Component {
             <Route path="/spotnew" render={() => {
               return <SpotNew createSpot = {this.createSpot} current_user = {this.props.current_user} />
             }} />
-            <Route path="/spotedit" component={SpotEdit} />
+            <Route path="/spotedit/:id" render = {(props) => {
+              let id = +props.match.params.id
+              let spot = this.state.spots.find(spotObject => spotObject.id === id)
+              return(
+                <SpotEdit
+                  spot = {spot}
+                  updateSpot = {this.updateSpot}
+                />
+              )
+            }} />
             <Route component={NotFound}/>
          </Switch>
          <Footer />
