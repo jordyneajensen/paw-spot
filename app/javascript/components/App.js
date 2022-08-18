@@ -56,7 +56,10 @@ class App extends React.Component {
               return <Home logged_in = {logged_in} sign_in_route = {sign_in_route} new_user_route = {new_user_route} />
             }}  />
             <Route path="/spotindex"  render={() => <SpotIndex spots = {this.state.spots} logged_in = {logged_in} />} />
-            <Route path="/spotshow"  component={SpotShow} />
+            <Route path="/spotshow/:id" render={(props) => {
+              let id = props.match.params.id
+              let spot = this.state.spots.find(spot => spot.id === +id)
+              return <SpotShow spot={spot}/>}} />
             <Route path="/myspots" component={ProtectedSpotIndex} />
             <Route path="/spotnew" component={SpotNew} />
             <Route path="/spotedit" component={SpotEdit} />
