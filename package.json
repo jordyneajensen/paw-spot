@@ -20,5 +20,13 @@
     "enzyme-adapter-react-16": "^1.15.6",
     "react-test-renderer": "^18.2.0",
     "webpack-dev-server": "^3"
+  },
+  "jest": {
+    "roots": [
+      "app/javascript/components"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif)$": "<rootDir>/app/javascript/components/fileMock.js"
+    }
   }
 }
