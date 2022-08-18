@@ -27,6 +27,18 @@ class App extends React.Component {
       
     }
   }
+
+  componentDidMount(){
+    this.readSpot()
+  }
+
+  readSpot = () => {
+    fetch("/spots")
+    .then(response => response.json())
+    .then(spotsArray => this.setState({spots: spotsArray}))
+    .catch(errors => console.log("Spots read errors", errors)) 
+  }
+
   render () {
     const {
       logged_in,
@@ -43,7 +55,7 @@ class App extends React.Component {
             <Route exact path="/" render={() => {
               return <Home logged_in = {logged_in} sign_in_route = {sign_in_route} new_user_route = {new_user_route} />
             }}  />
-            <Route path="/spotindex"  component={SpotIndex} />
+            <Route path="/spotindex"  render={() => <SpotIndex spots = {this.state.spots} logged_in = {logged_in} />} />
             <Route path="/spotshow"  component={SpotShow} />
             <Route path="/myspots" component={ProtectedSpotIndex} />
             <Route path="/spotnew" component={SpotNew} />
