@@ -2,6 +2,7 @@ import React from "react"
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import AboutUs from './pages/AboutUs'
 import SpotIndex from './pages/SpotIndex'
 import SpotShow from './pages/SpotShow'
 import SpotNew from './pages/SpotNew'
@@ -81,6 +82,7 @@ class App extends React.Component {
               return <SpotNew createSpot = {this.createSpot} current_user = {this.props.current_user} />
             }} />
             <Route path="/spotedit" component={SpotEdit} />
+            <Route path="/spotaboutus" component={AboutUs}/>
             <Route component={NotFound}/>
          </Switch>
          <Footer />
