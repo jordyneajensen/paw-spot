@@ -39,6 +39,20 @@ class App extends React.Component {
     .catch(errors => console.log("Spots read errors", errors)) 
   }
 
+  createSpot = (spot) => {
+    fetch("/spots", {
+      body: JSON.stringify(spot),
+      headers:{
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+      
+    })
+    .then(response => response.json())
+    .then(() => this.readSpot())
+    .catch(errors => console.log("New spot Error", errors))
+  }
+
   render () {
     const {
       logged_in,
@@ -55,12 +69,17 @@ class App extends React.Component {
               return <Home logged_in = {logged_in} sign_in_route = {sign_in_route} new_user_route = {new_user_route} />
             }}  />
             <Route path="/spotindex"  render={() => <SpotIndex spots = {this.state.spots} logged_in = {logged_in} />} />
-            <Route path="/spotshow"  component={SpotShow} />
             <Route path="/myspots" render={(props) =>{
               let mySpots = this.state.spots.filter(spot => spot.user_id === current_user.id)
               return(
             <ProtectedSpotIndex spots={mySpots} />)}} />
-            <Route path="/spotnew" component={SpotNew} />
+            <Route path="/spotshow/:id" render={(props) => {
+              let id = props.match.params.id
+              let spot = this.state.spots.find(spot => spot.id === +id)
+              return <SpotShow spot={spot}/>}} />
+            <Route path="/spotnew" render={() => {
+              return <SpotNew createSpot = {this.createSpot} current_user = {this.props.current_user} />
+            }} />
             <Route path="/spotedit" component={SpotEdit} />
             <Route component={NotFound}/>
          </Switch>
