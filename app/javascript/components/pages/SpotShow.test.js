@@ -21,9 +21,10 @@ describe("When SpotShow renders", () => {
       }
     
     let renderedSpotShow;
+    let props = {current_user: {id: 1}}
   
     beforeEach(() => {
-      renderedSpotShow = shallow(<SpotShow spot={spot} />);
+      renderedSpotShow = shallow(<SpotShow {...props} spot={spot} />);
     });
   
     it("displays one Card", () => {
@@ -33,7 +34,7 @@ describe("When SpotShow renders", () => {
   
     it("has one anchor tag", () =>{
       const spotShowAnchorTag = renderedSpotShow.find("a")
-      expect(spotShowAnchorTag.length).toEqual(1)
+      expect(spotShowAnchorTag.length).toEqual(3)
     })
   })
   
