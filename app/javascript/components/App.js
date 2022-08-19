@@ -2,6 +2,7 @@ import React from "react"
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import AboutUs from './pages/AboutUs'
 import SpotIndex from './pages/SpotIndex'
 import SpotShow from './pages/SpotShow'
 import SpotNew from './pages/SpotNew'
@@ -97,11 +98,18 @@ class App extends React.Component {
               )
             }} />
             <Route path="/spotindex"  render={() => <SpotIndex spots = {this.state.spots} logged_in = {logged_in} />} />
-            <Route path="/spotshow"  component={SpotShow} />
-            <Route path="/myspots" component={ProtectedSpotIndex} />
+            <Route path="/myspots" render={(props) =>{
+              let mySpots = this.state.spots.filter(spot => spot.user_id === current_user.id)
+              return(
+            <ProtectedSpotIndex spots={mySpots} />)}} />
+            <Route path="/spotshow/:id" render={(props) => {
+              let id = props.match.params.id
+              let spot = this.state.spots.find(spot => spot.id === +id)
+              return <SpotShow spot={spot}/>}} />
             <Route path="/spotnew" render={() => {
               return  <SpotNew createSpot = {this.createSpot} current_user = {this.props.current_user} />
-            }} />
+            }} />  
+            <Route path="/spotaboutus" component={AboutUs}/>
             <Route component={NotFound}/>
          </Switch>
          <Footer />
