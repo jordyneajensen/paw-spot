@@ -47,7 +47,7 @@ class App extends React.Component {
       sign_in_route,
       sign_out_route
     } = this.props
-
+    console.log(this.state.spots)
     return (
       <Router>
          <Header {...this.props}/>
@@ -57,7 +57,10 @@ class App extends React.Component {
             }}  />
             <Route path="/spotindex"  render={() => <SpotIndex spots = {this.state.spots} logged_in = {logged_in} />} />
             <Route path="/spotshow"  component={SpotShow} />
-            <Route path="/myspots" component={ProtectedSpotIndex} />
+            <Route path="/myspots" render={(props) =>{
+              let mySpots = this.state.spots.filter(spot => spot.user_id === current_user.id)
+              return(
+            <ProtectedSpotIndex spots={mySpots} />)}} />
             <Route path="/spotnew" component={SpotNew} />
             <Route path="/spotedit" component={SpotEdit} />
             <Route component={NotFound}/>
