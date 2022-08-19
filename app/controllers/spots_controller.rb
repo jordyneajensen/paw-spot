@@ -21,6 +21,12 @@ class SpotsController < ApplicationController
         render json: spot
     end
     
+    def destroy
+        spot = Spot.find(params[:id])  
+        spot.destroy
+        render json: spot
+    end
+
     private
     def spot_params
         params.require(:spot).permit(:name, :street, :city, :state, :zip, :description, :image, :user_id)

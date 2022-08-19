@@ -255,4 +255,31 @@ RSpec.describe "Spots", type: :request do
 
     end
   end
+
+  describe"DELETE /destroy" do
+    it"deletes a spot" do
+
+      user = User.where(email: 'test@example.com').first_or_create(password: '12345678', password_confirmation: '12345678')
+      
+      spot_params = {
+        spot: {
+            name: "Buzz Coffee",
+            street: "123 other way",
+            city: "San Diego",
+            state: "california",
+            zip: "22400",
+            description: "pet friendly spot one",
+            image:"https://images.hellogiggles.com/uploads/2017/06/23025549/coffeedoggettyimages-585356343-e1498237725281.jpg",
+            user_id: user.id 
+        }
+      }
+
+      post "/spots", params: spot_params
+      spot = Spot.first
+      delete"/spots/#{spot.id}"
+      expect(response).to have_http_status(200)
+      spots = Spot.all
+      expect(spots).to be_empty
+    end
+  end
 end
