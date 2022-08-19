@@ -15,6 +15,12 @@ class SpotsController < ApplicationController
         end
     end
 
+    def update
+        spot = Spot.find(params[:id])
+        spot.update(spot_params)
+        render json: spot
+    end
+    
     private
     def spot_params
         params.require(:spot).permit(:name, :street, :city, :state, :zip, :description, :image, :user_id)

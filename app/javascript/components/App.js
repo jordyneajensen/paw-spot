@@ -54,14 +54,29 @@ class App extends React.Component {
     .catch(errors => console.log("New spot Error", errors))
   }
 
+  updateSpot = (spot, id) => {
+    fetch(`/spots/${id}`,{
+      body: JSON.stringify(spot),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method:"PATCH"
+    })
+    .then(response => response.json())
+    .then(() => this.readSpot())
+    .catch(errors => console.log("Update spot errors", errors))
+  }
+
   render () {
     const {
       logged_in,
       current_user,
       new_user_route,
       sign_in_route,
-      sign_out_route
+      sign_out_route,
     } = this.props
+
+
     return (
       <Router>
          <Header {...this.props}/>
@@ -69,6 +84,19 @@ class App extends React.Component {
             <Route exact path="/" render={() => {
               return <Home logged_in = {logged_in} sign_in_route = {sign_in_route} new_user_route = {new_user_route} />
             }}  />
+             <Route path="/spotedit/:id" render = {(props) => {
+              let id = +props.match.params.id
+              let spot = this.state.spots.find(spotObject => spotObject.id === id)
+              
+              return(
+                <SpotEdit
+                  spot = {spot}
+                  updateSpot = {this.updateSpot}
+                  current_user={current_user}
+                />
+              
+              )
+            }} />
             <Route path="/spotindex"  render={() => <SpotIndex spots = {this.state.spots} logged_in = {logged_in} />} />
             <Route path="/myspots" render={(props) =>{
               let mySpots = this.state.spots.filter(spot => spot.user_id === current_user.id)
@@ -79,9 +107,8 @@ class App extends React.Component {
               let spot = this.state.spots.find(spot => spot.id === +id)
               return <SpotShow spot={spot}/>}} />
             <Route path="/spotnew" render={() => {
-              return <SpotNew createSpot = {this.createSpot} current_user = {this.props.current_user} />
-            }} />
-            <Route path="/spotedit" component={SpotEdit} />
+              return  <SpotNew createSpot = {this.createSpot} current_user = {this.props.current_user} />
+            }} />  
             <Route path="/spotaboutus" component={AboutUs}/>
             <Route component={NotFound}/>
          </Switch>
