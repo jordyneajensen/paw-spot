@@ -21,7 +21,7 @@ class ProtectedSpotIndex extends Component {
                     <CardTitle>{spot.name}</CardTitle>
                     <CardSubtitle> {spot.street} {spot.city} {spot.state} {spot.zip} 
                     </CardSubtitle>                   
-                    <Button><a href={"/spotshow"} >More Details</a></Button>      
+                    <Button><a href={`/spotshow/${spot.id}`} >More info here</a></Button>     
                   </CardBody>
               </Card>
               )

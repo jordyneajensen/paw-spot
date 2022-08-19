@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router-dom'
 import {
   Card,
   CardImg,
@@ -9,7 +10,15 @@ import {
 } from "reactstrap";
 
 class SpotShow extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      deleted: false
+    }
+  }
+
   render() {
+    
     let { spot } = this.props;
 
     return (
@@ -28,6 +37,12 @@ class SpotShow extends Component {
                 <br/>
               </CardText>
               <Button><a href={`/spotindex`} >All Spots</a></Button>
+              { spot.user_id === this.props.current_user.id &&
+              <>
+                <Button><a href={`/spotedit/${spot.id}`} >Edit </a></Button>
+                <Button><a onClick={() => this.props.deleteSpot(spot.id)} href={`/spotindex`} >Delete</a></Button>
+              </>
+              }
             </CardBody>
           </Card>
         }

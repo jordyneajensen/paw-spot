@@ -67,6 +67,18 @@ class App extends React.Component {
     .catch(errors => console.log("Update spot errors", errors))
   }
 
+  deleteSpot = (id) => {
+    fetch(`/spots/${id}`,{
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method:"DELETE"
+    })
+    .then(response => response.json())
+    .then(() => this.readSpot())
+    .catch(errors => console.log("Delete spot errors", errors))
+  }
+
   render () {
     const {
       logged_in,
@@ -98,18 +110,23 @@ class App extends React.Component {
               )
             }} />
             <Route path="/spotindex"  render={() => <SpotIndex spots = {this.state.spots} logged_in = {logged_in} />} />
+
             <Route path="/myspots" render={(props) =>{
               let mySpots = this.state.spots.filter(spot => spot.user_id === current_user.id)
               return(
             <ProtectedSpotIndex spots={mySpots} />)}} />
+
             <Route path="/spotshow/:id" render={(props) => {
               let id = props.match.params.id
               let spot = this.state.spots.find(spot => spot.id === +id)
-              return <SpotShow spot={spot}/>}} />
+              return <SpotShow spot={spot} current_user = {this.props.current_user} deleteSpot = {this.deleteSpot} />}} />
+
             <Route path="/spotnew" render={() => {
               return  <SpotNew createSpot = {this.createSpot} current_user = {this.props.current_user} />
             }} />  
+
             <Route path="/spotaboutus" component={AboutUs}/>
+
             <Route component={NotFound}/>
          </Switch>
          <Footer />
