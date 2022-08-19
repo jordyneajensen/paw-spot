@@ -47,7 +47,6 @@ class App extends React.Component {
       sign_in_route,
       sign_out_route
     } = this.props
-    console.log(this.state.spots)
     return (
       <Router>
          <Header {...this.props}/>
