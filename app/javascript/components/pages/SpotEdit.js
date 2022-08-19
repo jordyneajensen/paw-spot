@@ -4,26 +4,31 @@ import { Button } from 'reactstrap'
 import { Form, FormGroup, Input, Label} from 'reactstrap'
 
 class SpotEdit extends Component {
-  constructor(props){
-    super(props)
+ 
+  constructor(spot){
+    super(spot)
     this.state = {
       updatedSpot: {
-        name: "",
-        street: "",
-        city: "",
-        state: "",
-        zip: "",
-        description: "",
-        image: "",
-        user_id: ""
+        
+        name: this.props.spot?.name ||  "",
+        street: this.props.spot?.street || "",
+        city: this.props.spot?.city || "",
+        state: this.props.spot?.state || "",
+        zip: this.props.spot?.zip || "",
+        description: this.props.spot?.description || "",
+        image: this.props.spot?.image || "",
+        user_id: this.props.spot?.user_id
       },
+    
       submitted: false
     }
   }
 
+
+
   handleChange = (e) => {
   
-    let {updatedSpot} = this.state
+    const { updatedSpot } = this.state
     updatedSpot[e.target.name] = e.target.value
     this.setState({updatedSpot: updatedSpot})
   }
@@ -33,12 +38,13 @@ class SpotEdit extends Component {
     this.setState({submitted: true})
   }
 
+  
   render() {
-    console.log(this.state)
-    console.log(this.props)
     return (
       <>
+      
         <h1>Edit Pet Spot</h1>
+       
         <Form>
         <FormGroup>
               <Label for="name">Name</Label>
@@ -46,7 +52,6 @@ class SpotEdit extends Component {
                   type="text"
                   name="name"
                   onChange = {this.handleChange}
-                  default = {this.props.spot.name}
                   value = {this.state.updatedSpot.name}
               />
             </FormGroup>
@@ -57,7 +62,7 @@ class SpotEdit extends Component {
                   name="street"
                   onChange = {this.handleChange}
                   value = {this.state.updatedSpot.street}
-              />
+                  />
             </FormGroup>
             <FormGroup>
               <Label for="city">City</Label>
@@ -66,7 +71,7 @@ class SpotEdit extends Component {
                   name="city"
                   onChange = {this.handleChange}
                   value = {this.state.updatedSpot.city}
-              />
+                  />
             </FormGroup>
             <FormGroup>
               <Label for="state">State</Label>
@@ -84,7 +89,7 @@ class SpotEdit extends Component {
                   name="zip"
                   onChange={this.handleChange}
                   value={this.state.updatedSpot.zip}
-              />
+                  />
             </FormGroup>
             <FormGroup>
               <Label for="description">Description</Label>
@@ -93,7 +98,7 @@ class SpotEdit extends Component {
                   name="description"
                   onChange={this.handleChange}
                   value={this.state.updatedSpot.description}
-              />
+                  />
             </FormGroup>
             <FormGroup>
               <Label for="image">Image</Label>
@@ -102,15 +107,16 @@ class SpotEdit extends Component {
                   name="image"
                   onChange={this.handleChange}
                   value={this.state.updatedSpot.image}
-              />
+                  />
             </FormGroup>
               <Button
                 name="submit"
                 onClick={this.handleSubmit}>
                 Submit
               </Button>
-            {   this.state.submitted  && <Redirect to="/spotindex" />}
           </Form> 
+  
+        {this.state.submitted  && <Redirect to="/spotindex" />}   
       </>
     )
   }

@@ -72,10 +72,9 @@ class App extends React.Component {
       current_user,
       new_user_route,
       sign_in_route,
-      sign_out_route
+      sign_out_route,
     } = this.props
 
-    console.log(this.state)
 
     return (
       <Router>
@@ -84,21 +83,24 @@ class App extends React.Component {
             <Route exact path="/" render={() => {
               return <Home logged_in = {logged_in} sign_in_route = {sign_in_route} new_user_route = {new_user_route} />
             }}  />
-            <Route path="/spotindex"  render={() => <SpotIndex spots = {this.state.spots} logged_in = {logged_in} />} />
-            <Route path="/spotshow"  component={SpotShow} />
-            <Route path="/myspots" component={ProtectedSpotIndex} />
-            <Route path="/spotnew" render={() => {
-              return <SpotNew createSpot = {this.createSpot} current_user = {this.props.current_user} />
-            }} />
-            <Route path="/spotedit/:id" render = {(props) => {
+             <Route path="/spotedit/:id" render = {(props) => {
               let id = +props.match.params.id
               let spot = this.state.spots.find(spotObject => spotObject.id === id)
+              
               return(
                 <SpotEdit
                   spot = {spot}
                   updateSpot = {this.updateSpot}
+                  current_user={current_user}
                 />
+              
               )
+            }} />
+            <Route path="/spotindex"  render={() => <SpotIndex spots = {this.state.spots} logged_in = {logged_in} />} />
+            <Route path="/spotshow"  component={SpotShow} />
+            <Route path="/myspots" component={ProtectedSpotIndex} />
+            <Route path="/spotnew" render={() => {
+              return  <SpotNew createSpot = {this.createSpot} current_user = {this.props.current_user} />
             }} />
             <Route component={NotFound}/>
          </Switch>

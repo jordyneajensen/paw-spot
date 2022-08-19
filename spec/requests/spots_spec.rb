@@ -253,6 +253,6 @@ RSpec.describe "Spots", type: :request do
         
         expect(updated_spot.state).to eq "california"
 
-      end
+    end
   end
 end
