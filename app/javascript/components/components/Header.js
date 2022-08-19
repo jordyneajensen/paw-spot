@@ -24,7 +24,7 @@ class Header extends Component {
           {/* About link for all users */}
           {
             <NavItem>
-              <a href='/spotabout' className="nav-link">About</a>
+              <a href='/spotaboutus' className="nav-link">About Us</a>
             </NavItem>
           }
 

@@ -30,7 +30,7 @@ describe("When Header renders", () => {
   })
 
   it("displays an About link", () => {
-    const headerAboutRoute = renderedHeader.find("[href='/spotabout']")
+    const headerAboutRoute = renderedHeader.find("[href='/spotaboutus']")
     expect(headerAboutRoute.length).toEqual(1)
   })
 
