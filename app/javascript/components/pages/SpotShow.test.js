@@ -21,9 +21,12 @@ describe("When SpotShow renders", () => {
       }
     
     let renderedSpotShow;
-    let props = {current_user: {id: 1}} 
+
+    let props = {current_user: {id: 1}}
+  
     beforeEach(() => {
-      renderedSpotShow = shallow(<SpotShow spot={spot} {...props}/>);
+      renderedSpotShow = shallow(<SpotShow {...props} spot={spot} />);
+
     });
   
     it("displays one Card", () => {
