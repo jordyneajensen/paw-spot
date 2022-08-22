@@ -9,7 +9,6 @@ class SpotEdit extends Component {
     super(spot)
     this.state = {
       updatedSpot: {
-        
         name: this.props.spot?.name ||  "",
         street: this.props.spot?.street || "",
         city: this.props.spot?.city || "",
