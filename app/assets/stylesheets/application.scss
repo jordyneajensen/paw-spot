@@ -19,6 +19,31 @@
     transform: translate(-50%, -50%);
  }
 
+
+ .header {
+   display: flex;
+   justify-content: flex-end;
+   flex-direction: row;
+   background-color: #96ABB0;
+   font-family: Ubuntu;
+   margin-top: 0;
+   padding-top: 0;
+   padding-bottom: 0;
+}
+
+.nav-link {
+   color: #46433E;
+}
+
+.nav-link:hover {
+   color: #B36B39;
+}
+
+.logo {
+   height: 65px;
+   display: flex;
+}
+
  #footer-sizing {
    background-color: #96ABB0;
    width: 100%;
@@ -33,3 +58,4 @@
    text-align: center;
  }
  
+
