@@ -16,6 +16,7 @@ import {
 } from 'react-router-dom'
 
 import'./App.css'
+import '../../assets/stylesheets'
 
 
 

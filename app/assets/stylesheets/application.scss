@@ -1,5 +1,11 @@
 @import 'bootstrap';
 
+ html, body {
+   width: 100%;
+   height: 100%;
+   background-color: #D7E0E7;
+ }
+ 
  .notFound-img {  
     width: 1748px;
     height: 926px;
@@ -49,14 +55,42 @@
    width: 100%;
    height: 60px;
    padding-top: 20px;
-   display: block;
-   margin-top: 20px; 
  }
 
  .footer-container {
    font-family: 'Ubuntu';
    text-align: center;
  }
+
+ .home-message {
+   font-family: 'Unbuntu';
+   text-align: center;
+ }
+
+ .home-heading {
+   font-family: 'inspiration', cursive;
+ }
+
+ .home-container {
+   border: 1px solid black;
+   background-color: #D7E0E7;
+   text-align: center;
+   padding-top: 2rem;
+   padding-bottom: 1rem;
+ }
+
+.home-buttons {
+   display: flex;
+   justify-content: center;
+}
+
+.home-button-spacing {
+   margin-left: 36px;
+}
+
+.page-button {
+   color: blue !important;
+}
  
  .show-image {
    height: 400px;
@@ -81,4 +115,5 @@
 .delete {
    margin-left: 10px;
 }
+
 
