@@ -14,6 +14,7 @@ class SpotNew extends Component {
         state: "",
         zip:"",
         description:"",
+        category:"",
         image: "",
         user_id: this.props.current_user.id
       },
@@ -92,6 +93,17 @@ class SpotNew extends Component {
                   value={this.state.newSpot.description}
               />
             </FormGroup>
+            <FormGroup>
+            <Label for="category">Category</Label>
+            <Input type="select" name="category" onChange={this.handleChange}>
+              <option>Bar</option>
+              <option>Coffee</option>
+              <option>Beach</option>
+              <option>Park</option>
+              <option>Resturaunt</option>
+              <option>Retail</option>
+          </Input>
+          </FormGroup>
             <FormGroup>
               <Label for="image">Image</Label>
                 <Input
