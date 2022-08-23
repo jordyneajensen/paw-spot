@@ -44,7 +44,7 @@ class Home extends Component {
                 </>
             }
         </div>
-       
+        
             <UncontrolledCarousel 
                 items={[
                     {
