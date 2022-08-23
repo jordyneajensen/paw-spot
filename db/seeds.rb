@@ -20,6 +20,7 @@ user_spot_one = [
     zip: "22400",
     description: "pet friendly spot one",
     image:"https://images.hellogiggles.com/uploads/2017/06/23025549/coffeedoggettyimages-585356343-e1498237725281.jpg",
+    category: "Coffee"
   },
   {
     name: "Sandwhich Shop",
@@ -29,6 +30,7 @@ user_spot_one = [
     zip: "91911",
     description: "pet friendly spot two",
     image:"https://i.ytimg.com/vi/-paNTBJMcO0/maxresdefault.jpg",
+    category: "Resturaunt"
   }
   
 ]
@@ -42,6 +44,7 @@ user_spot_two = [
         zip: "22400",
         description: "pet friendly spot three",
         image:"https://i0.wp.com/sarahmarotta.com/wp-content/uploads/2019/04/stores-allow-dogs-7.jpg?resize=683%2C1024",
+        category: "Retail"
       },
       {
         name: "Dog Beach",
@@ -51,6 +54,7 @@ user_spot_two = [
         zip: "92107",
         description: "pet friendly spot four",
         image:"https://www.akc.org/wp-content/uploads/2017/08/Golden-Retriever-fetching-a-ball-on-the-beach-500x485.jpeg",
+        category: "Beach"
       }
     
 ]
