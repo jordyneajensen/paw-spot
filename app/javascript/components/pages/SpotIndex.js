@@ -28,6 +28,14 @@ class SpotIndex extends Component {
         }
     }
 
+    clearFilter = () => {
+        this.setState({filter: ""})
+    }
+    
+    filterByCat = (cat) => {
+        this.setState({filter: cat})
+    }
+
   render() {
     
     const {logged_in, spots} = this.props
@@ -71,13 +79,6 @@ class SpotIndex extends Component {
         </Row>
       </>
     )
-  }
-  clearFilter = () => {
-      this.setState({filter: ""})
-  }
-  
-  filterByCat = (cat) => {
-      this.setState({filter: cat})
   }
 }
 
