@@ -88,7 +88,6 @@ class App extends React.Component {
       sign_out_route,
     } = this.props
 
-
     return (
       <Router>
          <Header {...this.props}/>
@@ -103,6 +102,7 @@ class App extends React.Component {
               return(
                 <SpotEdit
                   spot = {spot}
+                  {...this.props}
                   updateSpot = {this.updateSpot}
                   current_user={current_user}
                 />
