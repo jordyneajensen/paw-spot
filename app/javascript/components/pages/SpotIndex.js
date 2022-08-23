@@ -1,16 +1,30 @@
+import isAnnotatedForRemoval from 'babel-plugin-transform-react-remove-prop-types/lib/isAnnotatedForRemoval'
 import React, { Component } from 'react'
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle, Button, Col, Row } from 'reactstrap'
 
 class SpotIndex extends Component {
     constructor(props) {
         super(props)
+        this.state={
+            categories: [
+                "Resturaunt",
+                "Bar",
+                "Coffee",
+                "Park",
+                "Beach",
+                "Retail"
+            ],
+            filter: ""
+        }
     }
 
     conditionalRendering = () =>{
         if(this.props.logged_in === false){
             return this.props.spots.length > 3 ? this.props.spots.slice(0,3) : this.props.spots
-        }else{
+        }else if(this.state.filter === ""){
             return this.props.spots
+        }else{
+            return this.props.spots.filter(item => item.category === this.state.filter)
         }
     }
 
@@ -21,7 +35,14 @@ class SpotIndex extends Component {
     return (
       <>
         {logged_in && 
+        <>
             <h1>Recent Pet Spots</h1>
+            <div>
+                <label>Filter By Category: </label>
+                <button className="buttonShow" onClick={this.clearFilter}>Show All</button>
+                    { this.state.categories.map(cat => <button onClick={() => {this.filterByCat(cat)}} key={cat}>{cat}</button>)}
+            </div>
+        </>
         }
         {!logged_in && 
             <>
@@ -33,6 +54,7 @@ class SpotIndex extends Component {
         <Row>
 
             {spots && this.conditionalRendering().map(spot => {
+                
                 return(
                     <Col sm={4} key={spot.id}>
                         <Card >
@@ -45,11 +67,19 @@ class SpotIndex extends Component {
                         </Card>
                     </Col>
                 )
-            })}
+        })}
         </Row>
       </>
     )
   }
+  clearFilter = () => {
+      this.setState({filter: ""})
+  }
+  
+  filterByCat = (cat) => {
+      this.setState({filter: cat})
+  }
 }
+
 
 export default SpotIndex
