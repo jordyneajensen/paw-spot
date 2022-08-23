@@ -23,26 +23,29 @@ class SpotShow extends Component {
 
     return (
       <>
-        <div className="show=container">
+        <div className="show-container">
         {spot &&
-          <Card id="showCard">
-            <CardImg src={spot.image} />
+          <Card>
+            <CardImg className="show-image" src={spot.image} />
             <CardBody>
               <CardTitle>{spot.name}</CardTitle>
               <CardText>
-                <span>{spot.street}
-                 {spot.city}, {spot.state} {spot.zip}</span>
+                <span>{spot.street} </span>
+                <br/>
+                <span>{spot.city}, {spot.state} {spot.zip}</span>
                 <br/>
                 <span>{spot.description}</span>
                 <br/>
               </CardText>
-              <Button><a href={`/spotindex`} >All Spots</a></Button>
-              { spot.user_id === this.props.current_user.id &&
-              <>
-                <Button><a href={`/spotedit/${spot.id}`} >Edit </a></Button>
-                <Button><a onClick={() => this.props.deleteSpot(spot.id)} href={`/spotindex`} >Delete</a></Button>
-              </>
-              }
+              <div className="show-buttons">
+                <Button><a href={`/spotindex`} >All Spots</a></Button>
+                { spot.user_id === this.props.current_user.id &&
+                <>
+                  <Button className="edit"><a href={`/spotedit/${spot.id}`} >Edit </a></Button>
+                  <Button className="delete"><a onClick={() => this.props.deleteSpot(spot.id)} href={`/spotindex`} >Delete</a></Button>
+                </>
+                }
+             </div>
             </CardBody>
           </Card>
         }
