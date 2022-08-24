@@ -123,13 +123,33 @@
 }
 
 // Buttons -----
+button.btn.btn-secondary {
+   background-color:#0C2D48;
+}
+
+button.btn.btn-secondary:hover, a:active {
+   background-color:#F24E70;
+}
+
+a {
+   color: #07D2BE;
+   text-decoration: none;
+   text-align: center;
+}
+
+a:hover, a:active {
+   color: #0C2D48;
+}
+
+Button {
+   background-color: #F24E70;
+}
 .edit {
     margin-left: 10px;
 }
 .delete {
    margin-left: 10px;
 }
-
 
 // SpotIndex
 .indexcardimg-sizing {
@@ -152,28 +172,6 @@
 
 .indexcard-container {
    filter: drop-shadow(0 0.2rem 0.25rem black);
-}
-
-button.btn.btn-secondary {
-   background-color:#0C2D48;
-}
-
-button.btn.btn-secondary:hover, a:active {
-   background-color:#F24E70;
-}
-
-a {
-   color: #07D2BE;
-   text-decoration: none;
-   text-align: center;
-}
-
-a:hover, a:active {
-   color: #0C2D48;
-}
-
-Button {
-   background-color: #F24E70;
 }
 
 // About -----
@@ -204,3 +202,5 @@ Button {
    font-size: 20px;
    font-weight: 300;
 }
+
+// New -----
