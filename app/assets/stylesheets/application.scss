@@ -6,14 +6,6 @@
    height: 100%;
    background-color: #B4F8C8;
  }
- body {
-   display: flex;
-   flex-direction: column;
- }
- 
- .content {
-   flex: 1 0 auto;
- }
 
  h1 {
    font-family: 'inspiration', cursive;
@@ -78,7 +70,6 @@
  .footer-container {
    font-family: 'Ubuntu';
    text-align: center;
-   flex-shrink: 0;
  }
 
  // Home -----
@@ -125,6 +116,7 @@
    margin: 0 auto;
    margin-top: 2rem;
    width: fit-content;
+   filter: drop-shadow(0 0.2rem 0.25rem black);
 }
 
 // Buttons -----
@@ -163,4 +155,25 @@ Button {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
- }
+   margin-bottom: 1rem;
+   filter: drop-shadow(0 0.2rem 0.25rem black);
+}
+
+.about-card {
+   margin-top: 20px;
+}
+
+.about-title {
+   text-align: center;
+   color: #0C2D48;
+   font-size: 40px;
+   font-weight: bold;
+   font-family: 'inspiration', cursive;
+}
+
+.about-subtitle {
+   text-align: center;
+   color: #F24E70;
+   font-size: 20px;
+   font-weight: 300;
+}
