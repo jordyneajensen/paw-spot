@@ -6,7 +6,15 @@
    height: 100%;
    background-color: #B4F8C8;
  }
- 
+
+ h1 {
+   font-family: 'inspiration', cursive;
+   text-align: center;
+   font-size: 65px;
+   margin-top: 1rem;
+}
+
+// Not Found -----
  .notFound-img {  
     width: 1748px;
     height: 926px;
@@ -26,7 +34,7 @@
     transform: translate(-50%, -50%);
  }
 
-
+// Header -----
  .header {
    display: flex;
    justify-content: flex-end;
@@ -51,6 +59,7 @@
    display: flex;
 }
 
+// Footer -----
  #footer-sizing {
    background-color: #07D2BE;
    width: 100%;
@@ -63,6 +72,7 @@
    text-align: center;
  }
 
+ // Home -----
  .home-message {
    font-family: 'Unbuntu';
    text-align: center;
@@ -91,9 +101,9 @@
    margin-left: 36px;
 }
  
+// Show -----
  .show-image {
    height: 400px;
-   // width: fit-content;
    display: flex;
    margin: 0 auto;
  }
@@ -106,8 +116,10 @@
    margin: 0 auto;
    margin-top: 2rem;
    width: fit-content;
+   filter: drop-shadow(0 0.2rem 0.25rem black);
 }
 
+// Buttons -----
 .edit {
     margin-left: 10px;
 }
@@ -116,23 +128,52 @@
 }
 
 button.btn.btn-secondary {
-   background-color: #F24E70;
+   background-color:#0C2D48;
 }
 
 button.btn.btn-secondary:hover, a:active {
-   background-color: #0C2D48;
+   background-color:#F24E70;
 }
 
 a {
-   color: #0C2D48;
+   color: #07D2BE;
    text-decoration: none;
    text-align: center;
 }
 
 a:hover, a:active {
-   color: #07D2BE;
+   color: #0C2D48;
 }
 
 Button {
    background-color: #F24E70;
+}
+
+// About -----
+.cards-container{
+   height: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin-bottom: 1rem;
+   filter: drop-shadow(0 0.2rem 0.25rem black);
+}
+
+.about-card {
+   margin-top: 20px;
+}
+
+.about-title {
+   text-align: center;
+   color: #0C2D48;
+   font-size: 40px;
+   font-weight: bold;
+   font-family: 'inspiration', cursive;
+}
+
+.about-subtitle {
+   text-align: center;
+   color: #F24E70;
+   font-size: 20px;
+   font-weight: 300;
 }
