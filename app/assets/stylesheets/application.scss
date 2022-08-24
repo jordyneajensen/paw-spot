@@ -7,8 +7,9 @@
  }
  
  .notFound-img {  
-    width: 1748px;
-    height: 926px;
+   
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
  }
@@ -24,7 +25,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
  }
-
 
  .header {
    display: flex;
@@ -68,7 +68,7 @@
  }
 
  .home-heading {
-   font-family: 'inspiration', cursive;
+   font-family: 'inspiration', 
  }
 
  .home-container {
@@ -87,17 +87,13 @@
 .home-button-spacing {
    margin-left: 36px;
 }
-
-.page-button {
-   color: blue !important;
-}
  
- .show-image {
+.show-image {
    height: 400px;
    // width: fit-content;
    display: flex;
    margin: 0 auto;
- }
+}
 
 .show-container {
    display: flex;
@@ -116,4 +112,25 @@
    margin-left: 10px;
 }
 
+// SpotIndex
+.indexcardimg-sizing {
+   width: 100%;
+   height: 20vw;
+   object-fit: cover;
+}
 
+.indexcard-spacing {
+   display: flex;
+   justify-content: space-around;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+
+.indexcard-text {
+   font-family: 'Ubuntu';
+   text-align: center;
+}
+
+.indexcard-container {
+   filter: drop-shadow(0 0.2rem 0.25rem black);
+}

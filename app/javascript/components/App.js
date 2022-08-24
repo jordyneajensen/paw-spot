@@ -16,7 +16,7 @@ import {
 } from 'react-router-dom'
 
 import'./App.css'
-import '../../assets/stylesheets'
+
 
 
 
@@ -91,6 +91,7 @@ class App extends React.Component {
 
     return (
       <Router>
+        <div></div>
          <Header {...this.props}/>
          <Switch>
             <Route exact path="/" render={() => {
