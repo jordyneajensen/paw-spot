@@ -203,4 +203,52 @@ Button {
    font-weight: 300;
 }
 
-// New -----
+// Devise -----
+.sign-up-form {
+   border: 1px solid #F24E70;
+   display: flex;
+   justify-content: center;
+   height: 100%;
+   align-items: center;
+   .field {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #0C2D48;
+      input {
+         padding: 0.4rem;
+         font-size: 15px;
+         width: 100%;
+      }
+   }
+
+   h2 {
+      font-family: 'inspiration', cursive;
+      font-size: 80px;
+      text-align: center;
+      color: #0C2D48
+   }
+
+   .submit-button {
+      margin-top: 5px;
+      font-size: 15px;
+      background-color: #0C2D48;
+      color: #07D2BE;
+      border: 1px solid #0C2D48;
+      padding: 10px;
+      border-radius: 5px;
+   }
+   .submit-button:hover{
+      background-color: #F24E70;
+      color: #0C2D48;
+    }
+    a {
+      color: #0C2D48;
+    }
+    a:hover{
+      color:#F24E70;
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+}
