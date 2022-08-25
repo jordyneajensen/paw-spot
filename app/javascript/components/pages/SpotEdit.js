@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { Button } from "reactstrap";
-import { Form, FormGroup, Input, Label } from "reactstrap";
+import { Form, FormGroup, Input, Label, Fade } from "reactstrap";
 
 class SpotEdit extends Component {
   constructor(props) {
@@ -56,85 +56,87 @@ class SpotEdit extends Component {
     return (
       <>
         <h1>Edit Pet Spot</h1>
-        <Form>
-          <FormGroup>
-            <Label for="name">Name</Label>
-            <Input
-              type="text"
-              name="name"
-              onChange={this.handleChange}
-              value={this.state.updatedSpot.name}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="street">Street</Label>
-            <Input
-              type="text"
-              name="street"
-              onChange={this.handleChange}
-              value={this.state.updatedSpot.street}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="city">City</Label>
-            <Input
-              type="text"
-              name="city"
-              onChange={this.handleChange}
-              value={this.state.updatedSpot.city}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="state">State</Label>
-            <Input
-              type="text"
-              name="state"
-              onChange={this.handleChange}
-              value={this.state.updatedSpot.state}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="zip">Zip</Label>
-            <Input
-              type="text"
-              name="zip"
-              onChange={this.handleChange}
-              value={this.state.updatedSpot.zip}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="description">Description</Label>
-            <Input
-              type="text"
-              name="description"
-              onChange={this.handleChange}
-              value={this.state.updatedSpot.description}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="category">Category</Label>
-            <Input type="select" name="category" onChange={this.handleChange}>
-            <option>Bar</option>
-            <option>Coffee</option>
-            <option>Beach</option>
-            <option>Park</option>
-            <option>Resturaunt</option>
-            <option>Retail</option>
-          </Input>
-          </FormGroup>
-          <FormGroup>
-            <Label for="image">Image</Label>
-            <Input
-              type="text"
-              name="image"
-              onChange={this.handleChange}
-              value={this.state.updatedSpot.image}
-            />
-          </FormGroup>
-          <Button name="submit" onClick={this.handleSubmit}>
-            Submit
-          </Button>
-        </Form>
+        <Fade className="edit-formbody">
+          <Form>
+            <FormGroup>
+              <Label for="name">Name</Label>
+              <Input className="form-input"
+                type="text"
+                name="name"
+                onChange={this.handleChange}
+                value={this.state.updatedSpot.name}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="street">Street</Label>
+              <Input className="form-input"
+                type="text"
+                name="street"
+                onChange={this.handleChange}
+                value={this.state.updatedSpot.street}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="city">City</Label>
+              <Input className="form-input"
+                type="text"
+                name="city"
+                onChange={this.handleChange}
+                value={this.state.updatedSpot.city}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="state">State</Label>
+              <Input className="form-input"
+                type="text"
+                name="state"
+                onChange={this.handleChange}
+                value={this.state.updatedSpot.state}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="zip">Zip</Label>
+              <Input className="form-input"
+                type="text"
+                name="zip"
+                onChange={this.handleChange}
+                value={this.state.updatedSpot.zip}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="description">Description</Label>
+              <Input className="form-input"
+                type="text"
+                name="description"
+                onChange={this.handleChange}
+                value={this.state.updatedSpot.description}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="category">Category</Label>
+              <Input type="select" name="category" onChange={this.handleChange} className="form-input">
+              <option>Bar</option>
+              <option>Coffee</option>
+              <option>Beach</option>
+              <option>Park</option>
+              <option>Resturaunt</option>
+              <option>Retail</option>
+            </Input>
+            </FormGroup>
+            <FormGroup>
+              <Label for="image">Image</Label>
+              <Input className="form-input"
+                type="text"
+                name="image"
+                onChange={this.handleChange}
+                value={this.state.updatedSpot.image}
+              />
+            </FormGroup>
+            <Button className="form-button" name="submit" onClick={this.handleSubmit}>
+              Submit
+            </Button>
+          </Form>
+        </Fade>
 
         {this.state.submitted && <Redirect to="/spotindex" />}
       </>
