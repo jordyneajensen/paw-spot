@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Geocode from "react-geocode"
-import { GoogleMap, InfoWindow, LoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import {
   Card,
   CardImg,
@@ -27,8 +27,10 @@ class SpotShow extends Component {
   }
 
   componentDidUpdate(prevProps) {
+    let apiKey = process.env.GOOGLE_MAPS_API_KEY
     if (this.props.spot !== prevProps.spot) {
-      Geocode.fromAddress(`${this.props.spot.street},${this.props.spot.city},${this.props.spot.state},${this.props.spot.zip}`, "AIzaSyAYDLOBAPis1X5bZaAT0pMBpNOg8bvLz38").then(
+      Geocode.fromAddress(`${this.props.spot.street},${this.props.spot.city},${this.props.spot.state},${this.props.spot.zip}`, `${apiKey}`
+      ).then(
         (response) => {
           const { lat, lng } = response.results[0].geometry.location
           console.log(lat,lng)
@@ -98,7 +100,8 @@ class SpotShow extends Component {
         <div className="google-map">
           <h3>Pet Spot Location</h3>
           <LoadScript
-          googleMapsApiKey="AIzaSyAYDLOBAPis1X5bZaAT0pMBpNOg8bvLz38"
+          googleMapsApiKey = {process.env.GOOGLE_MAPS_API_KEY}
+          
           
         >
           <GoogleMap
