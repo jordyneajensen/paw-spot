@@ -95,15 +95,15 @@ class SpotNew extends Component {
                   />
                 </FormGroup>
                 <FormGroup>
-                <Label for="category">Category</Label>
-                <Input className="form-input" type="select" name="category" onChange={this.handleChange}>
-                  <option>Bar</option>
-                  <option>Coffee</option>
-                  <option>Beach</option>
-                  <option>Park</option>
-                  <option>Resturaunt</option>
-                  <option>Retail</option>
-              </Input>
+                  <Label for="category">Category</Label>
+                    <Input className="form-input" type="select" name="category" onChange={this.handleChange}>
+                    <option>Bar</option>
+                    <option>Coffee</option>
+                    <option>Beach</option>
+                    <option>Park</option>
+                    <option>Resturaunt</option>
+                    <option>Retail</option>
+                  </Input>
               </FormGroup>
                 <FormGroup>
                   <Label for="image">Image</Label>

@@ -132,9 +132,9 @@ class App extends React.Component {
                 <Route component={NotFound}/>
             </Switch>
           </div>
-         <Footer />
-         </div>
-        </Router>
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }
