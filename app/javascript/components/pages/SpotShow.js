@@ -73,7 +73,7 @@ class SpotShow extends Component {
           <Card >
             <CardImg className="show-image" src={spot.image} />
             <CardBody className='indexcard-text'>
-              <CardTitle class>{spot.name}</CardTitle>
+              <CardTitle>{spot.name}</CardTitle>
               <CardText>
                 <span>{spot.street} </span>
                 <br/>
