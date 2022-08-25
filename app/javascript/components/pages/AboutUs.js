@@ -8,44 +8,45 @@ import {
     CardText,
     Button,
   } from "reactstrap";
+  import Jordyn from '../../../assets/images/Jordyn.JPG'
 
 export default class AboutUs extends Component {
   render() {
     return (
       <>
         <h1>The Creative Minds Behind Paw Spot</h1>
-        <div>
+        <div className='cards-container'>
             <Card style={{ width: '30rem' }}>
                 <CardImg/>
                 <CardBody>
-                    <CardTitle>Corey Arnold</CardTitle>
-                    <CardSubtitle>Tech Lead</CardSubtitle>
+                    <CardTitle className='about-title'>Corey Arnold</CardTitle>
+                    <CardSubtitle className='about-subtitle'>Tech Lead</CardSubtitle>
                     <CardText>About</CardText>
                 </CardBody>
-                <Button>Github</Button>
-                <Button>LinkedIn</Button>
+                <Button><a href='https://github.com/arnoldc94' target='_blank' rel='noopener noreferrer'>Github</a></Button>
+                <Button><a href='https://www.linkedin.com/in/corey-arnold-744391207/' target='_blank' rel='noopener noreferrer'>LinkedIn</a></Button>
             </Card>
 
             <Card style={{ width: '30rem' }}>
                 <CardImg/>
                 <CardBody>
-                    <CardTitle>William Segree</CardTitle>
-                    <CardSubtitle>Design Lead</CardSubtitle>
+                    <CardTitle className='about-title'>William Segree</CardTitle>
+                    <CardSubtitle className='about-subtitle'>Design Lead</CardSubtitle>
                     <CardText>About</CardText>
                 </CardBody>
-                <Button>Github</Button>
-                <Button>LinkedIn</Button>
+                <Button><a href='https://github.com/wasegree' target='_blank' rel='noopener noreferrer'>Github</a></Button>
+                <Button><a href='https://www.linkedin.com/in/williamsegree/' target='_blank' rel='noopener noreferrer'>LinkedIn</a></Button>
             </Card>
 
-            <Card style={{ width: '30rem' }}>
-                <CardImg/>
+            <Card className='about-card' style={{ width: '30rem' }}>
+                <CardImg src={Jordyn}/>
                 <CardBody>
-                    <CardTitle>Jordyn Jensen</CardTitle>
-                    <CardSubtitle>Product/Project Manager</CardSubtitle>
-                    <CardText>About</CardText>
+                    <CardTitle className='about-title'>Jordyn Jensen</CardTitle>
+                    <CardSubtitle className='about-subtitle'>Product/Project Manager</CardSubtitle>
+                    <CardText>Full-Stack Software Developer transitioning from a career in nursing with a passion for innovation, creativity, and analysis. Seeking to contribute to a team through problem-solving, task-prioritization, and project management. I believe in approaching life with out-of-the-box thinking and am always working towards big goals. In order to have success, you have to be willing to go against the grain and stretch yourself.</CardText>
                 </CardBody>
-                <Button>Github</Button>
-                <Button>LinkedIn</Button>
+                <Button><a href='https://github.com/jordyneajensen' target='_blank' rel='noopener noreferrer'>Github</a></Button>
+                <Button><a href='https://www.linkedin.com/in/jordyneajensen/' target='_blank' rel='noopener noreferrer'>LinkedIn</a></Button>
             </Card>
         </div>
       </>

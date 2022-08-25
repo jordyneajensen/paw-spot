@@ -1,15 +1,41 @@
 @import 'bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inspiration&family=Pacifico&display=swap');
 
+ * {
+   box-sizing: border-box;
+ }
+
  html, body {
-   width: 100%;
+   // width: 100%;
    height: 100%;
    background-color: #B4F8C8;
  }
- 
+
+ h1 {
+   font-family: 'inspiration', cursive;
+   text-align: center;
+   font-size: 65px;
+   margin-top: 1rem;
+}
+
+.page-container {
+   position: relative;
+   min-height: 100vh;
+}
+
+.content-wrap {
+   padding-bottom: 2.5rem;
+}
+
+.row {
+   margin-left: 0;
+   margin-right: 0;
+}
+// Not Found -----
  .notFound-img {  
-    width: 1748px;
-    height: 926px;
+   
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
  }
@@ -24,8 +50,26 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    filter: drop-shadow(0 0.2rem 0.25rem rgb(246, 196, 135));
  }
 
+ .notFound-parag {
+   font-size: 20px;
+   font-family: 'Ubuntu';
+ }
+
+ .notFound-button {
+   color:#07D2BE
+}
+
+.notFound-button:hover {
+   background-color: #F24E70;
+   color: #07D2BE;
+   font-family: 'Ubuntu';
+}
+
+
+// Header -----
 
  .header {
    display: flex;
@@ -51,6 +95,7 @@
    display: flex;
 }
 
+// Footer -----
  #footer-sizing {
    background-color: #07D2BE;
    width: 100%;
@@ -59,10 +104,15 @@
  }
 
  .footer-container {
+   bottom: 0;
+   height: 2.5rem;
    font-family: 'Ubuntu';
+   position: absolute;
    text-align: center;
+   width: 100%;
  }
 
+ // Home -----
  .home-message {
    font-family: 'Unbuntu';
    text-align: center;
@@ -72,6 +122,7 @@
    font-family: 'inspiration', cursive;
    color: #0C2D48;
    font-size: 90px;
+
  }
 
  .home-container {
@@ -91,12 +142,12 @@
    margin-left: 36px;
 }
  
+// Show -----
  .show-image {
    height: 400px;
-   // width: fit-content;
    display: flex;
    margin: 0 auto;
- }
+}
 
 .show-container {
    display: flex;
@@ -106,6 +157,7 @@
    margin: 0 auto;
    margin-top: 2rem;
    width: fit-content;
+   filter: drop-shadow(0 0.2rem 0.25rem black);
 }
 
 .google-map {
@@ -115,6 +167,28 @@
    margin-top: 1.5rem;
 }
 
+// Buttons -----
+button.btn.btn-secondary {
+   background-color:#0C2D48;
+}
+
+button.btn.btn-secondary:hover, a:active {
+   background-color:#F24E70;
+}
+
+a {
+   color: #07D2BE;
+   text-decoration: none;
+   text-align: center;
+}
+
+a:hover, a:active {
+   color: #0C2D48;
+}
+
+Button {
+   background-color: #F24E70;
+}
 .edit {
     margin-left: 10px;
 }
@@ -122,24 +196,114 @@
    margin-left: 10px;
 }
 
+// SpotIndex
+.indexcardimg-sizing {
+   width: 100%;
+   height: 20vw;
+   object-fit: cover;
+}
+
+.indexcard-spacing {
+   display: flex;
+   justify-content: space-around;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+
+.indexcard-text {
+   font-family: 'Ubuntu';
+   text-align: center;
+}
+
+.indexcard-container {
+   filter: drop-shadow(0 0.2rem 0.25rem black);
+}
+
 button.btn.btn-secondary {
-   background-color: #F24E70;
+   background-color:#0C2D48;
 }
 
 button.btn.btn-secondary:hover, a:active {
-   background-color: #0C2D48;
+   background-color:#F24E70;
+   border-radius: 50%;
 }
 
 a {
-   color: #0C2D48;
+   color: #07D2BE;
    text-decoration: none;
    text-align: center;
 }
 
 a:hover, a:active {
-   color: #07D2BE;
+   color: #0C2D48;
 }
 
 Button {
    background-color: #F24E70;
 }
+
+// About -----
+.cards-container{
+   height: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin-bottom: 1rem;
+   filter: drop-shadow(0 0.2rem 0.25rem black);
+}
+
+.about-card {
+   margin-top: 20px;
+}
+
+.about-title {
+   text-align: center;
+   color: #0C2D48;
+   font-size: 40px;
+   font-weight: bold;
+   font-family: 'inspiration', cursive;
+}
+
+.about-subtitle {
+   text-align: center;
+   color: #F24E70;
+   font-size: 20px;
+   font-weight: 300;
+}
+
+
+// SpotEdit
+
+.edit-formbody {
+   width: 75%;
+   display: block;
+   margin: auto;
+}
+
+.form-input {
+   font-family: 'Ubuntu';
+}
+
+.form-input:hover {
+   background-color: #F24E70;
+   color: #0C2D48; 
+}
+
+.form-button {
+   color:#07D2BE
+   
+}
+
+.form-button:hover {
+   background-color: #F24E70;
+   border-radius: 50%;
+   color: #07D2BE;
+   font-family: 'Ubuntu';
+}
+
+.form-spacing {
+   margin-bottom: 2rem;
+}
+
+// New -----
+
