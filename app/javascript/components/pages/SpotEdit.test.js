@@ -27,15 +27,15 @@ describe("When SpottEdit renders", () => {
   })
   it("displays 7 FormGroups ", () => {
     const spotEditFormGroup = spotEdit.find("FormGroup")
-    expect(spotEditFormGroup.length).toEqual(7)
+    expect(spotEditFormGroup.length).toEqual(8)
   })
   it("displays 7 labels ", () => {
     const spotEditLabel = spotEdit.find("Label")
-    expect(spotEditLabel.length).toEqual(7)
+    expect(spotEditLabel.length).toEqual(8)
   })
   it("displays 7 inputs ", () => {
     const spotEditInput = spotEdit.find("Input")
-    expect(spotEditInput.length).toEqual(7)
+    expect(spotEditInput.length).toEqual(8)
   })
   it("displays a button ", () => {
     const spotEditButton = spotEdit.find("Button")
