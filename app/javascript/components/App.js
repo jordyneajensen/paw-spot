@@ -18,6 +18,7 @@ import {
 import'./App.css'
 
 
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -89,45 +90,45 @@ class App extends React.Component {
 
     return (
       <Router>
-         <Header {...this.props}/>
-         <Switch>
-            <Route exact path="/" render={() => {
-              return <Home logged_in = {logged_in} sign_in_route = {sign_in_route} new_user_route = {new_user_route} />
-            }}  />
-             <Route path="/spotedit/:id" render = {(props) => {
-              let id = +props.match.params.id
-              let spot = this.state.spots.find(spotObject => spotObject.id === id)
-              
-              return(
-                <SpotEdit
-                  spot = {spot}
-                  {...this.props}
-                  updateSpot = {this.updateSpot}
-                  current_user={current_user}
-                />
-              
-              )
-            }} />
-            <Route path="/spotindex"  render={() => <SpotIndex spots = {this.state.spots} logged_in = {logged_in} />} />
+          <Header {...this.props}/>
+          <Switch className='content'>
+              <Route exact path="/" render={() => {
+                return <Home logged_in = {logged_in} sign_in_route = {sign_in_route} new_user_route = {new_user_route} />
+              }}  />
+              <Route path="/spotedit/:id" render = {(props) => {
+                let id = +props.match.params.id
+                let spot = this.state.spots.find(spotObject => spotObject.id === id)
+                
+                return(
+                  <SpotEdit
+                    spot = {spot}
+                    {...this.props}
+                    updateSpot = {this.updateSpot}
+                    current_user={current_user}
+                  />
+                
+                )
+              }} />
+              <Route path="/spotindex"  render={() => <SpotIndex spots = {this.state.spots} logged_in = {logged_in} />} />
 
-            <Route path="/myspots" render={(props) =>{
-              let mySpots = this.state.spots.filter(spot => spot.user_id === current_user.id)
-              return(
-            <ProtectedSpotIndex spots={mySpots} />)}} />
+              <Route path="/myspots" render={(props) =>{
+                let mySpots = this.state.spots.filter(spot => spot.user_id === current_user.id)
+                return(
+              <ProtectedSpotIndex spots={mySpots} />)}} />
 
-            <Route path="/spotshow/:id" render={(props) => {
-              let id = props.match.params.id
-              let spot = this.state.spots.find(spot => spot.id === +id)
-              return <SpotShow id={id} spot={spot} current_user = {this.props.current_user} deleteSpot = {this.deleteSpot} />}} />
+              <Route path="/spotshow/:id" render={(props) => {
+                let id = props.match.params.id
+                let spot = this.state.spots.find(spot => spot.id === +id)
+                return <SpotShow spot={spot} current_user = {this.props.current_user} deleteSpot = {this.deleteSpot} />}} />
 
-            <Route path="/spotnew" render={() => {
-              return  <SpotNew createSpot = {this.createSpot} current_user = {this.props.current_user} />
-            }} />  
+              <Route path="/spotnew" render={() => {
+                return  <SpotNew createSpot = {this.createSpot} current_user = {this.props.current_user} />
+              }} />  
 
-            <Route path="/spotaboutus" component={AboutUs}/>
+              <Route path="/spotaboutus" component={AboutUs}/>
 
-            <Route component={NotFound}/>
-         </Switch>
+              <Route component={NotFound}/>
+          </Switch>
          <Footer />
         </Router>
     );

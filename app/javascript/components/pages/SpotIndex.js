@@ -44,7 +44,7 @@ class SpotIndex extends Component {
       <>
         {logged_in && 
         <>
-            <h1>Recent Pet Spots</h1>
+            <h1 className='spotindex-heading'>Recent Pet Spots</h1>
             <div>
                 <label>Filter By Category: </label>
                 <button className="buttonShow" onClick={this.clearFilter}>Show All</button>
@@ -65,14 +65,16 @@ class SpotIndex extends Component {
                 
                 return(
                     <Col sm={4} key={spot.id}>
-                        <Card >
-                            <CardImg src={spot.image} alt="Pet-friendly image"/>
-                            <CardBody>
-                                <CardTitle>{spot.name}</CardTitle>
-                                <CardSubtitle>{spot.street} {spot.city} {spot.state} {spot.zip}</CardSubtitle>
-                                <Button><a href={`/spotshow/${spot.id}`} >More info here</a></Button>
-                            </CardBody>
-                        </Card>
+                        <div className='indexcard-container'>
+                            <Card className='indexcard-spacing'>
+                                <CardImg src={spot.image} alt="Pet-friendly image" className='indexcardimg-sizing'/>
+                                <CardBody className='indexcard-text'>
+                                    <CardTitle>{spot.name}</CardTitle>
+                                    <CardSubtitle>{spot.street} {spot.city} {spot.state} {spot.zip}</CardSubtitle>
+                                    <Button><a href={`/spotshow/${spot.id}`} >More info here</a></Button>
+                                </CardBody>
+                            </Card>
+                        </div>
                     </Col>
                 )
         })}
