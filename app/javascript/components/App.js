@@ -118,10 +118,10 @@ class App extends React.Component {
                   return(
                 <ProtectedSpotIndex spots={mySpots} />)}} />
 
-                <Route path="/spotshow/:id" render={(props) => {
-                  let id = props.match.params.id
-                  let spot = this.state.spots.find(spot => spot.id === +id)
-                  return <SpotShow spot={spot} current_user = {this.props.current_user} deleteSpot = {this.deleteSpot} />}} />
+              <Route path="/spotshow/:id" render={(props) => {
+                let id = props.match.params.id
+                let spot = this.state.spots.find(spot => spot.id === +id)
+                return <SpotShow spot={spot} current_user = {this.props.current_user} deleteSpot = {this.deleteSpot} />}} />
 
                 <Route path="/spotnew" render={() => {
                   return  <SpotNew createSpot = {this.createSpot} current_user = {this.props.current_user} />
