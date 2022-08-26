@@ -16,8 +16,8 @@ export default class AboutUs extends Component {
       <>
         <h1>The Creative Minds Behind Paw Spot</h1>
         <div className='cards-container'>
-            <Card style={{ width: '30rem' }}>
-                <CardImg/>
+            <Card className='about-card' style={{ width: '30rem' }}>
+                <CardImg className='about-image'/>
                 <CardBody>
                     <CardTitle className='about-title'>Corey Arnold</CardTitle>
                     <CardSubtitle className='about-subtitle'>Tech Lead</CardSubtitle>
@@ -27,8 +27,8 @@ export default class AboutUs extends Component {
                 <Button><a href='https://www.linkedin.com/in/corey-arnold-744391207/' target='_blank' rel='noopener noreferrer'>LinkedIn</a></Button>
             </Card>
 
-            <Card style={{ width: '30rem' }}>
-                <CardImg/>
+            <Card className='about-card' style={{ width: '30rem' }}>
+                <CardImg className='about-image'/>
                 <CardBody>
                     <CardTitle className='about-title'>William Segree</CardTitle>
                     <CardSubtitle className='about-subtitle'>Design Lead</CardSubtitle>
@@ -39,7 +39,7 @@ export default class AboutUs extends Component {
             </Card>
 
             <Card className='about-card' style={{ width: '30rem' }}>
-                <CardImg src={Jordyn}/>
+                <CardImg className='about-image' src={Jordyn} style={{}}/>
                 <CardBody>
                     <CardTitle className='about-title'>Jordyn Jensen</CardTitle>
                     <CardSubtitle className='about-subtitle'>Product/Project Manager</CardSubtitle>
