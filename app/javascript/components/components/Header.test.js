@@ -36,7 +36,7 @@ describe("When Header renders", () => {
 
 
   it("displays a Recent Spots link", () => {
-    const headerRecentSpotsRoute = renderedHeader.find("[href='/spotabout']")
+    const headerRecentSpotsRoute = renderedHeader.find("[href='/spotaboutus']")
     expect(headerRecentSpotsRoute.length).toEqual(1)
   })
 })

@@ -15,8 +15,8 @@ class ProtectedSpotIndex extends Component {
           <Row sm="3">
             {this.props.spots && this.props.spots.map(spot => {
               return(
-              <div className='indexcard-container'>
-                <Card key ={spot.id} className='indexcard-spacing'>
+              <div key ={spot.id} className='indexcard-container'>
+                <Card  className='indexcard-spacing'>
                   <CardImg top width="100%" src={spot.image}  className='indexcardimg-sizing' alt="pet-friendly spot" ></CardImg>
                   <CardBody className='indexcard-text'>
                     <CardTitle>{spot.name}</CardTitle>

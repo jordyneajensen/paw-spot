@@ -60,4 +60,66 @@ describe("when index logged out renders", () => {
 })
 
 
+describe("when index renders", () => {
+
+    let protectedSpotIndex;
+    const props = {
+        spots : [
+            {
+                id:1,
+                name:"buzz",
+                street:"123 random",
+                city: "san diego",
+                state: "ca",
+                zip: "12345",
+                image:"img",
+                category:"bar",
+                user_id:1
+            }   
+        ]
+    }
+    
+    let renderedIndex;
+    beforeEach(() => {
+        renderedIndex = shallow(<SpotIndex {...props}/>);
+
+    });
+it("displays a div", () => {
+    const spotIndexDiv = renderedIndex.find("div")
+    expect(spotIndexDiv.length).toEqual(1)
+})
+
+it("displays a Card", () => {
+    const spotIndexCard = renderedIndex.find("Card")
+    expect(spotIndexCard.length).toEqual(1)
+})
+
+it("displays a CardImg", () => {
+    const spotIndexImg = renderedIndex.find("CardImg")
+    expect(spotIndexImg.length).toEqual(1)
+})
+
+it("displays a CardBody", () => {
+    const spotIndexBody = renderedIndex.find("CardBody")
+    expect(spotIndexBody.length).toEqual(1)
+})
+
+it("displays a CardTitle", () => {
+    const spotIndexTitle = renderedIndex.find("CardTitle")
+    expect(spotIndexTitle.length).toEqual(1)
+})
+
+it("displays a CardSubtitle", () => {
+    const spotIndexSubtitle = renderedIndex.find("CardSubtitle")
+    expect(spotIndexSubtitle.length).toEqual(1)
+})
+
+it("displays a button", () => {
+    const spotIndexButton = renderedIndex.find("Button")
+    expect(spotIndexButton.length).toEqual(1)
+})
+ 
+})
+
+
    

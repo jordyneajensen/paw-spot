@@ -13,6 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 
+
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
@@ -41,3 +42,6 @@ yarn-debug.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+#ignore test coverage files
+/coverage

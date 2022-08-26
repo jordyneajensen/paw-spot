@@ -34,9 +34,49 @@ describe("When SpotShow renders", () => {
       expect(spotShowHeading.length).toEqual(1)
     })
   
-    it("has one anchor tag", () =>{
+    it("has three anchor tag", () =>{
       const spotShowAnchorTag = renderedSpotShow.find("a")
       expect(spotShowAnchorTag.length).toEqual(3)
+    })
+
+    it("has three buttons tag", () =>{
+      const spotShowButton = renderedSpotShow.find("Button")
+      expect(spotShowButton.length).toEqual(3)
+    })
+
+    it("has one CardImg ", () =>{
+      const spotShowCardImg = renderedSpotShow.find("CardImg")
+      expect(spotShowCardImg.length).toEqual(1)
+    })
+
+    it("has one CardTitle tag", () =>{
+      const spotShowCardTitle = renderedSpotShow.find("CardTitle")
+      expect(spotShowCardTitle.length).toEqual(1)
+    })
+
+    it("has one CardText tag", () =>{
+      const spotShowCardText = renderedSpotShow.find("CardText")
+      expect(spotShowCardText.length).toEqual(1)
+    })
+
+    it("has three div tags", () =>{
+      const spotShowDiv = renderedSpotShow.find("div")
+      expect(spotShowDiv.length).toEqual(3)
+    })
+
+    it("has one LoadScript tag", () =>{
+      const spotShowLoadScript = renderedSpotShow.find("LoadScript")
+      expect(spotShowLoadScript.length).toEqual(1)
+    })
+
+    it("has one GoogleMap tag", () =>{
+      const spotShowGoogleMap = renderedSpotShow.find("GoogleMap")
+      expect(spotShowGoogleMap.length).toEqual(1)
+    })
+
+    it("has one Marker tag", () =>{
+      const spotShowMarker = renderedSpotShow.find("Marker")
+      expect(spotShowMarker.length).toEqual(2)
     })
   })
   

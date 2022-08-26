@@ -25,15 +25,25 @@ describe("When SpottEdit renders", () => {
     const spotEditHeading = spotEdit.find("h1").text("Edit Pet Spot")
     expect(spotEditHeading)
   })
-  it("displays 7 FormGroups ", () => {
+
+  it("displays a Fade ", () => {
+    const spotEditFade = spotEdit.find("Fade")
+    expect(spotEditFade.length).toEqual(1)
+  })
+
+  it("displays a Form ", () => {
+    const spotEditForm = spotEdit.find("Form")
+    expect(spotEditForm.length).toEqual(1)
+  })
+  it("displays 8 FormGroups ", () => {
     const spotEditFormGroup = spotEdit.find("FormGroup")
     expect(spotEditFormGroup.length).toEqual(8)
   })
-  it("displays 7 labels ", () => {
+  it("displays 8 labels ", () => {
     const spotEditLabel = spotEdit.find("Label")
     expect(spotEditLabel.length).toEqual(8)
   })
-  it("displays 7 inputs ", () => {
+  it("displays 8 inputs ", () => {
     const spotEditInput = spotEdit.find("Input")
     expect(spotEditInput.length).toEqual(8)
   })
@@ -41,5 +51,10 @@ describe("When SpottEdit renders", () => {
     const spotEditButton = spotEdit.find("Button")
     expect(spotEditButton.length).toEqual(1)
   })
+
+  it("displays 6 option tags", () => {
+    const spotEditOption = spotEdit.find("option")
+    expect(spotEditOption.length).toEqual(6)
+})
 
 })

@@ -11,6 +11,7 @@ import {
 import Jordyn from '../../../assets/images/Jordyn.JPG'
 import William from '../../../assets/images/William'
 
+
 export default class AboutUs extends Component {
   render() {
     return (
