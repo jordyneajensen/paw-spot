@@ -8,10 +8,27 @@ describe("When ProtectedSpotIndex renders", () => {
     
       
     let protectedSpotIndex;
-    let props = {current_user: {id: 1}, logged_in: true}
+    const props = {
+        spots : [
+            {
+                id:1,
+                name:"buzz",
+                street:"123 random",
+                city: "san diego",
+                state: "ca",
+                zip: "12345",
+                image:"img",
+                category:"bar",
+                user_id:1
+            }
+            
+        ],
+        current_user: {id: 1},
+        logged_in: true
+    }
   
     beforeEach(() => {
-      protectedSpotIndex = shallow(<ProtectedSpotIndex {...props}  />);
+      protectedSpotIndex = shallow(<ProtectedSpotIndex {...props} />);
     });
   
     it("has an h1 tag", () =>{
@@ -23,4 +40,42 @@ describe("When ProtectedSpotIndex renders", () => {
         const protectedSpotIndexRow = protectedSpotIndex.find("Row")
         expect(protectedSpotIndexRow.length).toEqual(1)
     })
+
+    it("displays a div", () => {
+        const protectedSpotIndexDiv = protectedSpotIndex.find("div")
+        expect(protectedSpotIndexDiv.length).toEqual(2)
+    })
+
+    it("displays a Card", () => {
+        const protectedSpotIndexCard = protectedSpotIndex.find("Card")
+        expect(protectedSpotIndexCard.length).toEqual(1)
+    })
+
+    it("displays a CardImg", () => {
+        const protectedSpotIndexImg = protectedSpotIndex.find("CardImg")
+        expect(protectedSpotIndexImg.length).toEqual(1)
+    })
+
+    it("displays a CardBody", () => {
+        const protectedSpotIndexBody = protectedSpotIndex.find("CardBody")
+        expect(protectedSpotIndexBody.length).toEqual(1)
+    })
+
+    it("displays a CardTitle", () => {
+        const protectedSpotIndexTitle = protectedSpotIndex.find("CardTitle")
+        expect(protectedSpotIndexTitle.length).toEqual(1)
+    })
+
+    it("displays a CardSubtitle", () => {
+        const protectedSpotIndexSubtitle = protectedSpotIndex.find("CardSubtitle")
+        expect(protectedSpotIndexSubtitle.length).toEqual(1)
+    })
+
+    it("displays a button", () => {
+        const protectedSpotIndexButton = protectedSpotIndex.find("Button")
+        expect(protectedSpotIndexButton.length).toEqual(1)
+    })
+
+
+    
 })

@@ -25,21 +25,28 @@ describe("When SpottNew renders", () => {
     const spotNewHeading = spotNew.find("h1").text("New Pet Spot")
     expect(spotNewHeading)
   })
-  it("displays 7 FormGroups ", () => {
+  it("displays 8 FormGroups ", () => {
     const spotNewFormGroup = spotNew.find("FormGroup")
-    expect(spotNewFormGroup.length).toEqual(7)
+    expect(spotNewFormGroup.length).toEqual(8)
   })
-  it("displays 7 labels ", () => {
+  it("displays 8 labels ", () => {
     const spotNewLabel = spotNew.find("Label")
-    expect(spotNewLabel.length).toEqual(7)
+    expect(spotNewLabel.length).toEqual(8)
   })
-  it("displays 7 inputs ", () => {
+  it("displays 8 inputs ", () => {
     const spotNewInput = spotNew.find("Input")
-    expect(spotNewInput.length).toEqual(7)
+    expect(spotNewInput.length).toEqual(8)
   })
   it("displays a button ", () => {
     const spotNewButton = spotNew.find("Button")
     expect(spotNewButton.length).toEqual(1)
   })
 
+  it("displays 6 option tags", () => {
+    const spotNewOption = spotNew.find("option")
+    expect(spotNewOption.length).toEqual(6)
 })
+
+})
+
+
