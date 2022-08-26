@@ -8,7 +8,7 @@ import {
     CardText,
     Button,
   } from "reactstrap";
-  import Jordyn from '../../../assets/images/Jordyn.JPG'
+  import Jordyn from '../../../assets/images/Jordyn.jpg'
 
 export default class AboutUs extends Component {
   render() {

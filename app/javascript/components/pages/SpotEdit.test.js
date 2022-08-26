@@ -25,6 +25,16 @@ describe("When SpottEdit renders", () => {
     const spotEditHeading = spotEdit.find("h1").text("Edit Pet Spot")
     expect(spotEditHeading)
   })
+
+  it("displays a Fade ", () => {
+    const spotEditFade = spotEdit.find("Fade")
+    expect(spotEditFade.length).toEqual(1)
+  })
+
+  it("displays a Form ", () => {
+    const spotEditForm = spotEdit.find("Form")
+    expect(spotEditForm.length).toEqual(1)
+  })
   it("displays 8 FormGroups ", () => {
     const spotEditFormGroup = spotEdit.find("FormGroup")
     expect(spotEditFormGroup.length).toEqual(8)
