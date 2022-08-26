@@ -1,4 +1,3 @@
-import isAnnotatedForRemoval from 'babel-plugin-transform-react-remove-prop-types/lib/isAnnotatedForRemoval'
 import React, { Component } from 'react'
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle, Button, Col, Row } from 'reactstrap'
 

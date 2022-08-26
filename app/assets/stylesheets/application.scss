@@ -9,6 +9,7 @@
    // width: 100%;
    height: 100%;
    background-color: #B4F8C8;
+   cursor: url(Paw_Print.svg), auto !important;
  }
 
  h1 {
@@ -90,6 +91,7 @@
 
 .nav-link:hover {
    color: #F24E70;
+   cursor: url(Paw_Print.svg), auto !important;
 }
 
 .logo {
@@ -182,30 +184,55 @@
 
 button.btn.btn-secondary {
    background-color:#0C2D48;
-}
-
-button.btn.btn-secondary:hover, a:active {
-   background-color:#F24E70;
+   cursor: url(Paw_Print.svg), auto !important;
 }
 
 a {
    color: #07D2BE;
    text-decoration: none;
    text-align: center;
+   cursor: url(Paw_Print.svg), auto !important;
 }
 
 a:hover, a:active {
    color: #0C2D48;
+   cursor: url(Paw_Print.svg), auto !important;
 }
 
 Button {
    background-color: #F24E70;
+   cursor: url(Paw_Print.svg), auto !important;
 }
+
+button.btn.btn-secondary {
+   background-color:#0C2D48;
+}
+
+button.btn.btn-secondary:hover, a:active {
+   background-color:#F24E70;
+   border-radius: 50%;
+   cursor: url(Paw_Print.svg), auto !important;
+}
+
+.carousel-indicators .active {
+   cursor: url(Paw_Print.svg), auto !important;
+}
+
 .edit {
-    margin-left: 10px;
+   margin-left: 10px;
 }
 .delete {
    margin-left: 10px;
+}
+
+.new-button {
+   display: flex;
+   justify-content: center;
+}
+
+.edit-button {
+   display: flex;
+   justify-content: center;
 }
 
 // SpotIndex
@@ -231,28 +258,6 @@ Button {
    filter: drop-shadow(0 0.2rem 0.25rem black);
 }
 
-button.btn.btn-secondary {
-   background-color:#0C2D48;
-}
-
-button.btn.btn-secondary:hover, a:active {
-   background-color:#F24E70;
-   border-radius: 50%;
-}
-
-a {
-   color: #07D2BE;
-   text-decoration: none;
-   text-align: center;
-}
-
-a:hover, a:active {
-   color: #0C2D48;
-}
-
-Button {
-   background-color: #F24E70;
-}
 
 // About -----
 .cards-container{
@@ -356,6 +361,7 @@ Button {
     .logo-signup {
       display: flex;
       align-items: center;
+      justify-content: center;
       .sign-up {
          text-align: center;
          margin-left: 1rem;
@@ -413,8 +419,8 @@ Button {
       background-color: #F24E70;
       color: #0C2D48;
       border-radius: 50%;
-    }
-    a {
+   }
+   a {
       color: #0C2D48;
       font-size: 15px;
     }
@@ -428,6 +434,7 @@ Button {
     .logo-signup {
       display: flex;
       align-items: center;
+      justify-content: center;
       .log-in {
          text-align: center;
          margin-left: 1rem;
@@ -454,11 +461,11 @@ Button {
          display: flex;
       }
     }
+    br {
+      display: none;
+   }
 }
 
-br {
-   display: none;
-}
 
 // Forgot Password -----
 .forgot-your-password {
@@ -519,6 +526,7 @@ br {
     .logo-signup {
       display: flex;
       align-items: center;
+      justify-content: center;
       .log-in {
          text-align: center;
          margin-left: 1rem;
@@ -554,8 +562,7 @@ br {
 }
 
 .form-button {
-   color:#07D2BE
-   
+   color:#07D2BE;
 }
 
 .form-button:hover {

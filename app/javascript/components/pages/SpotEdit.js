@@ -132,9 +132,11 @@ class SpotEdit extends Component {
                 value={this.state.updatedSpot.image}
               />
             </FormGroup>
+          <div className='edit-button'>
             <Button className="form-button" name="submit" onClick={this.handleSubmit}>
               Submit
             </Button>
+          </div>
           </Form>
         </Fade>
 
