@@ -114,11 +114,13 @@ class SpotNew extends Component {
                       value={this.state.newSpot.image}
                   />
                 </FormGroup>
+                <div className='new-button'>
                   <Button className="form-button"
                     name="submit"
                     onClick={this.handleSubmit}>
                     Submit
-                  </Button>
+                  </Button >
+                </div>
                 {   this.state.submitted  && <Redirect to="/spotindex" />}
           </Form> 
         </Fade>

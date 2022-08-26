@@ -199,7 +199,9 @@ a:hover, a:active {
 
 Button {
    background-color: #F24E70;
+   cursor: url(Paw_Print.svg), auto !important;
 }
+
 button.btn.btn-secondary {
    background-color:#0C2D48;
 }
@@ -215,10 +217,20 @@ button.btn.btn-secondary:hover, a:active {
 }
 
 .edit {
-    margin-left: 10px;
+   margin-left: 10px;
 }
 .delete {
    margin-left: 10px;
+}
+
+.new-button {
+   display: flex;
+   justify-content: center;
+}
+
+.edit-button {
+   display: flex;
+   justify-content: center;
 }
 
 // SpotIndex
@@ -399,8 +411,8 @@ button.btn.btn-secondary:hover, a:active {
       background-color: #F24E70;
       color: #0C2D48;
       border-radius: 50%;
-    }
-    a {
+   }
+   a {
       color: #0C2D48;
       font-size: 15px;
     }
@@ -441,11 +453,11 @@ button.btn.btn-secondary:hover, a:active {
          display: flex;
       }
     }
+    br {
+      display: none;
+   }
 }
 
-br {
-   display: none;
-}
 
 // Forgot Password -----
 .forgot-your-password {
@@ -542,8 +554,7 @@ br {
 }
 
 .form-button {
-   color:#07D2BE
-   
+   color:#07D2BE;
 }
 
 .form-button:hover {
