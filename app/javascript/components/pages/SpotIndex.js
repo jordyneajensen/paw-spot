@@ -44,10 +44,12 @@ class SpotIndex extends Component {
         {logged_in && 
         <>
             <h1 className='spotindex-heading'>Recent Pet Spots</h1>
-            <div>
+            <div className='filter'>
                 <label>Filter By Category: </label>
-                <button className="buttonShow" onClick={this.clearFilter}>Show All</button>
-                    { this.state.categories.map(cat => <button onClick={() => {this.filterByCat(cat)}} key={cat}>{cat}</button>)}
+                <div className='filter-buttons'>
+                    <button className="buttonShow" onClick={this.clearFilter}>Show All</button>
+                        { this.state.categories.map(cat => <button onClick={() => {this.filterByCat(cat)}} key={cat}>{cat}</button>)}
+                </div>
             </div>
         </>
         }
@@ -76,7 +78,7 @@ class SpotIndex extends Component {
                         </div>
                     </Col>
                 )
-        })}
+            })}
         </Row>
       </>
     )

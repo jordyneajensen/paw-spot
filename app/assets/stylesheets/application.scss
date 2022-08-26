@@ -9,6 +9,7 @@
    // width: 100%;
    height: 100%;
    background-color: #B4F8C8;
+   cursor: url(Paw_Print.svg), auto !important;
  }
 
  h1 {
@@ -31,6 +32,8 @@
    margin-left: 0;
    margin-right: 0;
 }
+
+
 // Not Found -----
  .notFound-img {  
    
@@ -88,6 +91,7 @@
 
 .nav-link:hover {
    color: #F24E70;
+   cursor: url(Paw_Print.svg), auto !important;
 }
 
 .logo {
@@ -180,30 +184,55 @@
 
 button.btn.btn-secondary {
    background-color:#0C2D48;
-}
-
-button.btn.btn-secondary:hover, a:active {
-   background-color:#F24E70;
+   cursor: url(Paw_Print.svg), auto !important;
 }
 
 a {
    color: #07D2BE;
    text-decoration: none;
    text-align: center;
+   cursor: url(Paw_Print.svg), auto !important;
 }
 
 a:hover, a:active {
    color: #0C2D48;
+   cursor: url(Paw_Print.svg), auto !important;
 }
 
 Button {
    background-color: #F24E70;
+   cursor: url(Paw_Print.svg), auto !important;
 }
+
+button.btn.btn-secondary {
+   background-color:#0C2D48;
+}
+
+button.btn.btn-secondary:hover, a:active {
+   background-color:#F24E70;
+   border-radius: 50%;
+   cursor: url(Paw_Print.svg), auto !important;
+}
+
+.carousel-indicators .active {
+   cursor: url(Paw_Print.svg), auto !important;
+}
+
 .edit {
-    margin-left: 10px;
+   margin-left: 10px;
 }
 .delete {
    margin-left: 10px;
+}
+
+.new-button {
+   display: flex;
+   justify-content: center;
+}
+
+.edit-button {
+   display: flex;
+   justify-content: center;
 }
 
 // SpotIndex
@@ -229,28 +258,6 @@ Button {
    filter: drop-shadow(0 0.2rem 0.25rem black);
 }
 
-button.btn.btn-secondary {
-   background-color:#0C2D48;
-}
-
-button.btn.btn-secondary:hover, a:active {
-   background-color:#F24E70;
-   border-radius: 50%;
-}
-
-a {
-   color: #07D2BE;
-   text-decoration: none;
-   text-align: center;
-}
-
-a:hover, a:active {
-   color: #0C2D48;
-}
-
-Button {
-   background-color: #F24E70;
-}
 
 // About -----
 .cards-container{
@@ -263,6 +270,21 @@ Button {
 }
 
 .about-card {
+   display: flex;
+   justify-content: space-around;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+
+.about-image {
+   width: 100%;
+   // height: 20vw;
+   object-fit: cover;
+}
+
+.aboutus-img {
+   width: 90%;
+   margin: auto;
    margin-top: 20px;
 }
 
@@ -339,6 +361,7 @@ Button {
     .logo-signup {
       display: flex;
       align-items: center;
+      justify-content: center;
       .sign-up {
          text-align: center;
          margin-left: 1rem;
@@ -396,8 +419,8 @@ Button {
       background-color: #F24E70;
       color: #0C2D48;
       border-radius: 50%;
-    }
-    a {
+   }
+   a {
       color: #0C2D48;
       font-size: 15px;
     }
@@ -411,6 +434,7 @@ Button {
     .logo-signup {
       display: flex;
       align-items: center;
+      justify-content: center;
       .log-in {
          text-align: center;
          margin-left: 1rem;
@@ -437,11 +461,88 @@ Button {
          display: flex;
       }
     }
+    br {
+      display: none;
+   }
 }
 
-br {
-   display: none;
+
+// Forgot Password -----
+.forgot-your-password {
+   display: flex;
+   justify-content: center;
+   height: 100%;
+   align-items: center;
+   .field {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #0C2D48;
+      font-family: 'Ubuntu';
+      input {
+         padding: 0.4rem;
+         font-size: 15px;
+         width: 100%;
+         font-family: 'Ubuntu';
+      }
+      input:hover {
+         background-color: #F24E70;
+         color: #0C2D48; 
+      }
+   }
+
+   h2 {
+      font-family: 'inspiration', cursive;
+      font-size: 80px;
+      text-align: center;
+      color: #0C2D48;
+      margin-left: 5px;
+   }
+
+   .submit-password {
+      margin-top: 5px;
+      font-size: 15px;
+      background-color: #0C2D48;
+      color: #07D2BE;
+      border: 1px solid #0C2D48;
+      padding: 10px;
+      border-radius: 5px;
+   }
+   .submit-password:hover{
+      background-color: #F24E70;
+      color: #0C2D48;
+      border-radius: 50%;
+    }
+    a {
+      color: #0C2D48;
+      font-size: 15px;
+    }
+    a:hover{
+      color:#F24E70;
+    }
+    .logo {
+      width: 75px;
+      height: 75px;
+    }
+    .logo-signup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .log-in {
+         text-align: center;
+         margin-left: 1rem;
+      }
+    }
+
+    .password-actions {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .links {
+         display: flex;
+      }
+    }
 }
+
 
 // SpotEdit
 
@@ -461,8 +562,7 @@ br {
 }
 
 .form-button {
-   color:#07D2BE
-   
+   color:#07D2BE;
 }
 
 .form-button:hover {
@@ -475,4 +575,13 @@ br {
 .form-spacing {
    margin-bottom: 2rem;
 }
+
+// filter
+
+.filter {
+   display: flex;
+   justify-content: center;
+}
+// New -----
+
 
