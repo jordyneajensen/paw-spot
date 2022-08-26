@@ -3,7 +3,7 @@
 [Paw Spot Live Link](https://paw-spot.herokuapp.com/)
 
 ## Overview
-Welcome to Paw Spot! Are your fur-babies your best friend? Do you wish you could take them more places? Paw Spot is here for you. Here at Paw Spot we are creating an app where users can post pet-friendly locations along with the ability to view other users pets posts and even search for local spots near you. Our goals are to increase waggy tails, improve pet bonding, and create fun local experiences for our users.
+Welcome to Paw Spot! Are your fur-babies your best friend? Do you wish you could take them more places? Paw Spot is here for you. Here at Paw Spot we are creating an app where users can post pet-friendly locations along with the ability to view other users pet posts and even search for local spots near you. Our goals are to increase waggy tails, improve pet bonding, and create fun local experiences for our users.
 
 ## Features
 -User Login and Authentication
