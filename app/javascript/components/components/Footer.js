@@ -6,7 +6,7 @@ class Footer extends Component {
       <>
         <div className='footer-container'>
           <div id='footer-sizing'>
-            <p><strong>&copy; Pet Spot 2022</strong></p>
+            <p><strong>&copy; Paw Spot 2022</strong></p>
           </div>
         </div>
       </>

@@ -31,6 +31,8 @@
    margin-left: 0;
    margin-right: 0;
 }
+
+
 // Not Found -----
  .notFound-img {  
    
@@ -273,6 +275,12 @@ Button {
    width: 100%;
    // height: 20vw;
    object-fit: cover;
+}
+
+.aboutus-img {
+   width: 90%;
+   margin: auto;
+   margin-top: 20px;
 }
 
 .about-title {
@@ -560,4 +568,13 @@ br {
 .form-spacing {
    margin-bottom: 2rem;
 }
+
+// filter
+
+.filter {
+   display: flex;
+   justify-content: center;
+}
+// New -----
+
 
