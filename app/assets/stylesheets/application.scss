@@ -1,5 +1,6 @@
 @import 'bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inspiration&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Sansita+Swashed:wght@300&family=Varela+Round&display=swap');
 
  * {
    box-sizing: border-box;
@@ -57,7 +58,7 @@
 
  .notFound-parag {
    font-size: 20px;
-   font-family: 'Ubuntu';
+   font-family: 'Varela Round', sans-serif;
  }
 
  .notFound-button {
@@ -86,6 +87,7 @@
 
 .nav-link {
    color: #0C2D48;
+   font-family: 'Varela Round', sans-serif;
 }
 
 .nav-link:hover {
@@ -168,6 +170,7 @@
    flex-direction: column;
    align-items: center;
    margin-top: 1.5rem;
+   font-family: 'Unbuntu';
 }
 
 .edit {
@@ -229,6 +232,14 @@ Button {
 
 .indexcard-container {
    filter: drop-shadow(0 0.2rem 0.25rem black);
+}
+
+.spotindex-sneak {
+   text-align: center;
+}
+
+.sneak-subheadings {
+   font-family: 'Varela Round', sans-serif;
 }
 
 button.btn.btn-secondary {
@@ -296,6 +307,11 @@ Button {
    color: #F24E70;
    font-size: 20px;
    font-weight: 300;
+   font-family: 'Varela Round', sans-serif;
+}
+
+.aboutus-text {
+   font-family: 'Unbuntu';
 }
 
 // Sign Up -----
@@ -535,7 +551,6 @@ br {
     }
 }
 
-
 // SpotEdit
 
 .edit-formbody {
@@ -569,12 +584,22 @@ br {
    margin-bottom: 2rem;
 }
 
-// filter
-
 .filter {
    display: flex;
    justify-content: center;
 }
-// New -----
 
+.filterby-cat {
+   font-family: 'Varela Round', sans-serif;
+   font-size: 18px;
+   font-weight: bold;
+}
+
+.pagecard-title {
+   font-family: 'Varela Round', sans-serif;
+}
+
+// uncontrolledcarousel {
+//    height: 100%;
+// }
 

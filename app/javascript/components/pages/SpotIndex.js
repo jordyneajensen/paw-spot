@@ -1,4 +1,3 @@
-import isAnnotatedForRemoval from 'babel-plugin-transform-react-remove-prop-types/lib/isAnnotatedForRemoval'
 import React, { Component } from 'react'
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle, Button, Col, Row } from 'reactstrap'
 
@@ -38,7 +37,10 @@ class SpotIndex extends Component {
 
   render() {
     
-    const {logged_in, spots} = this.props
+    const {
+        logged_in,
+        new_user_route, 
+        spots} = this.props
     
     return (
       <>
@@ -46,19 +48,21 @@ class SpotIndex extends Component {
         <>
             <h1 className='spotindex-heading'>Recent Pet Spots</h1>
             <div className='filter'>
-                <label>Filter By Category: </label>
-                <div className='filter-buttons'>
+                <label className='filterby-cat'>Filter By Category: </label>
                     <button className="buttonShow" onClick={this.clearFilter}>Show All</button>
                         { this.state.categories.map(cat => <button onClick={() => {this.filterByCat(cat)}} key={cat}>{cat}</button>)}
-                </div>
             </div>
         </>
         }
         {!logged_in && 
             <>
-                <h1>Sneak Peak!</h1>
-                <h3>Sign Up for the full</h3>
-                <h3>experience!</h3>
+                <div className='spotindex-sneak'>
+                    <h1>Sneak Peak!</h1>
+                    <div className='sneak-subheadings'>
+                        <h3>Sign up for the full experience!</h3>
+                    </div>
+                    <Button><a href={'users/sign_up'}>Sign Up</a></Button>
+                </div>
             </>
         }
         <Row>
@@ -71,9 +75,11 @@ class SpotIndex extends Component {
                             <Card className='indexcard-spacing'>
                                 <CardImg src={spot.image} alt="Pet-friendly image" className='indexcardimg-sizing'/>
                                 <CardBody className='indexcard-text'>
-                                    <CardTitle>{spot.name}</CardTitle>
+                                    <CardTitle className='pagecard-title'>{spot.name}</CardTitle>
                                     <CardSubtitle>{spot.street} {spot.city} {spot.state} {spot.zip}</CardSubtitle>
+                                {logged_in &&
                                     <Button><a href={`/spotshow/${spot.id}`} >More info here</a></Button>
+                                }
                                 </CardBody>
                             </Card>
                         </div>
