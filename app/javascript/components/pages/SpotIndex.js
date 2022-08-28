@@ -45,10 +45,29 @@ class SpotIndex extends Component {
         <>
             <h1 className='spotindex-heading'>Recent Pet Spots</h1>
             <div className='filter'>
-                <label>Filter By Category: </label>
                 <div className='filter-buttons'>
-                    <button className="buttonShow" onClick={this.clearFilter}>Show All</button>
-                        { this.state.categories.map(cat => <button onClick={() => {this.filterByCat(cat)}} key={cat}>{cat}</button>)}
+                    <button className="buttonShow" onClick={this.clearFilter}>
+                    <div class="c1"></div>
+                        <div class="c2"></div>
+                        <div class="c3"></div>
+                        <div class="c4"></div>
+                        <div class="b1">
+                            <div class="b2">
+                                Show All   
+                            </div>
+                        </div>
+                    </button>
+                        { this.state.categories.map(cat => <button onClick={() => {this.filterByCat(cat)}} key={cat}>
+                        <div class="c1"></div>
+                        <div class="c2"></div>
+                        <div class="c3"></div>
+                        <div class="c4"></div>
+                        <div class="b1">
+                            <div class="b2">
+                                {cat}   
+                            </div>
+                        </div>
+                            </button>)}
                 </div>
             </div>
         </>
