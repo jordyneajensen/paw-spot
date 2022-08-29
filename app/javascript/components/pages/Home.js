@@ -18,7 +18,7 @@ class Home extends Component {
             <div>
                 <h1 className='home-heading'>Welcome To Paw Spot!</h1>
                 <p className='home-message'>
-                Welcome to Paw Spot! Are your fur-babies your best friend? Do you wish you could take them more places? Paw Spot is here for you. Here at Paw Spot we are creating an app where users can post pet-friendly locations along with the ability to view other users pet posts and even search for local spots near you. Our goals are to increase waggy tails, improve pet bonding, and create fun local experiences for our users.
+                Welcome to Paw Spot! Are your fur-babies your best friend? Do you wish you could take them more places? Paw Spot is here for you. Here at Paw Spot we are creating an app where users can post pet-friendly locations along with the ability to view other users pet posts and even search for local spots near you. Our goals are to increase waggy tails, improve pet bonding, and create fun local experiences for our users. 
                 </p>
             </div>
             {!logged_in && 
@@ -50,20 +50,17 @@ class Home extends Component {
             <UncontrolledCarousel className='carousel'
                 items={[
                     {
-                    altText: 'Slide 1',
-                    caption: 'Slide 1',
+                    caption: 'Coffee Please',
                     key: 1,
                     src: 'https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80'
                     },
                     {
-                    altText: 'Slide 2',
-                    caption: 'Slide 2',
+                    caption: 'Suns Out Tongues Out',
                     key: 2,
                     src: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
                     },
                     {
-                    altText: 'Slide 3',
-                    caption: 'Slide 3',
+                    caption: 'Waggy Tails',
                     key: 3,
                     src: 'https://images.unsplash.com/photo-1558929996-da64ba858215?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80'
 
@@ -75,7 +72,7 @@ class Home extends Component {
             <div className='home-walkthrough-container'>
                 <img src={tutorial}/>
                 <p className='home-message'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Enjoy this tutorial on Paw Spot and have fun Exploring all we have to offer! From finding pet-friendly coffee-shops to saving your favorite off-leash dog park, Paw Spot is here to inspire and create fun memories with your furbabies! 
                 </p>
             </div>
         }

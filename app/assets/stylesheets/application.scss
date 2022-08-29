@@ -166,6 +166,15 @@
    border:2px solid black;
 }
 
+.carousel-caption {
+   font-family: 'Varela Round', sans-serif;
+   color: #F24E70;
+
+   p {
+      display: none;
+   }
+}
+
 .home-walkthrough-container {
    display: flex;
    justify-content: space-between;
@@ -383,7 +392,7 @@ a:hover, a:active {
 }
 
 .aboutus-text {
-   font-family: 'Unbuntu';
+   font-family: 'Varela Round', sans-serif;
 }
 
 // Sign Up -----
