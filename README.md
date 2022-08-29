@@ -3,15 +3,15 @@
 [Paw Spot Live Link](https://paw-spot.herokuapp.com/)
 
 ## Overview
-Welcome to Paw Spot! Are your fur-babies your best friend? Do you wish you could take them more places? Paw Spot is here for you. Here at Paw Spot we are creating an app where users can post pet-friendly locations along with the ability to view other users pet posts and even search for local spots near you. Our goals are to increase waggy tails, improve pet bonding, and create fun local experiences for our users.
+- Welcome to Paw Spot! Are your fur-babies your best friend? Do you wish you could take them more places? Paw Spot is here for you. Here at Paw Spot we are creating an app where users can post pet-friendly locations along with the ability to view other users pet posts and even search for local spots near you. Our goals are to increase waggy tails, improve pet bonding, and create fun local experiences for our users.
 
 ## Features
--User Login and Authentication
--Ability to Add, Update, and delete pet-friendly spots
--Have personal spots just for user
--View all spots
--Have spots underneath specific categories
--Integrating Map API to help users locate pet-friendly spots
+- User Login and Authentication
+- Ability to Add, Update, and delete pet-friendly spots
+- Have personal spots just for user
+- View all spots
+- Can filter paw spots by category
+- Integrated Map API to help users locate pet-friendly spots
 
 ## Running The Project
 - `git clone` the repository
@@ -35,62 +35,62 @@ Welcome to Paw Spot! Are your fur-babies your best friend? Do you wish you could
 
 
 ## Built With
--React on Rails
--React Strap
--Yarn
--JavaScript
--Active Record
--Heroku
+- React on Rails
+- React Strap
+- Yarn
+- JavaScript
+- Active Record
+- Heroku
 
 ## Test Driven Development
--Jest Testing
--Rspec
--Enzyme
--Backend Testing Coverage: 87.18%
--Frontend Testing Coverage: > 60%
+- Jest Testing
+- Rspec
+- Enzyme
+- Backend Testing Coverage: 87.18%
+- Frontend Testing Coverage: > 60%
 
 ## Dependencies
--"@babel/preset-react": "^7.18.6",
--"@rails/activestorage": "^7.0.3-1",
--"@rails/ujs": "^7.0.3-1",
--"@rails/webpacker": "5.4.3",
--"@react-google-maps/api": "^2.12.2",
--"axios": "^0.27.2",
--"babel-plugin-transform-react-remove-prop-types": "^0.4.24",
--"enzyme": "^3.11.0",
--"enzyme-adapter-react-16": "^1.15.6",
--"google-map-react": "^2.2.0",
--"google-maps-react": "^2.0.6",
--"jest": "^28.1.3",
--"prop-types": "^15.8.1",
--"react": "^18.2.0",
--"react-dom": "^18.2.0",
--"react-geocode": "^0.2.3",
--"react-router-dom": "5.3.3",
--"react_ujs": "^2.6.2",
--"reactstrap": "^9.1.3",
--"webpack": "^4.46.0",
--"webpack-cli": "^3.3.12"
+- "@babel/preset-react": "^7.18.6",
+- "@rails/activestorage": "^7.0.3-1",
+- "@rails/ujs": "^7.0.3-1",
+- "@rails/webpacker": "5.4.3",
+- "@react-google-maps/api": "^2.12.2",
+- "axios": "^0.27.2",
+- "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+- "enzyme": "^3.11.0",
+- "enzyme-adapter-react-16": "^1.15.6",
+- "google-map-react": "^2.2.0",
+- "google-maps-react": "^2.0.6",
+- "jest": "^28.1.3",
+- "prop-types": "^15.8.1",
+- "react": "^18.2.0",
+- "react-dom": "^18.2.0",
+- "react-geocode": "^0.2.3",
+- "react-router-dom": "5.3.3",
+- "react_ujs": "^2.6.2",
+- "reactstrap": "^9.1.3",
+- "webpack": "^4.46.0",
+- "webpack-cli": "^3.3.12"
 
 ## Contributers
--Corey Arnold
- Tech Lead
- [Github](https://github.com/arnoldc94)
- [LinkedIn](https://www.linkedin.com/in/corey-arnold-744391207/)
--William Segree
- Design Lead
- [Github](https://github.com/wasegree)
- [LinkedIn](https://www.linkedin.com/in/williamsegree/)
--Jordyn Jensen 
- Product/Project Manager
- [Github](https://github.com/jordyneajensen)
- [LinkedIn](https://www.linkedin.com/in/jordyneajensen/)
+- Corey Arnold
+ - Tech Lead
+ - [Github](https://github.com/arnoldc94)
+ - [LinkedIn](https://www.linkedin.com/in/corey-arnold-744391207/)
+- William Segree
+ - Design Lead
+ - [Github](https://github.com/wasegree)
+ - [LinkedIn](https://www.linkedin.com/in/williamsegree/)
+- Jordyn Jensen 
+ - Product/Project Manager
+ - [Github](https://github.com/jordyneajensen)
+ - [LinkedIn](https://www.linkedin.com/in/jordyneajensen/)
 
 ## Credit and Collaborations
 - [Figma](https://figma.com/) for initial wireframing and work flow management.
 - [Trello](https://trello.com/) for project management.
 - [Stack Overflow](https://stackoverflow.com/) for the struggles.
-- [LEARN Academy](https://github.com/learn-academy-2022-charlie/Syllabus) for general guidance.
+- [LEARN Academy](https://github.com/learn-academy-2022-delta) for guidance.
 - LEARN Staff
     - Elyse Montano
     - Tricia Sykes
