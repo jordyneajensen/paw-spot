@@ -8,8 +8,8 @@ import {
     CardText,
     Button,
   } from "reactstrap";
-import Jordyn from '../../../assets/images/Jordyn.jpg'
-import William from '../../../assets/images/William'
+import Jordyn from '../../../assets/images/JoJo.jpg'
+import William from '../../../assets/images/William.jpg'
 import Corey from '../../../assets/images/Corey.jpeg'
 
 
