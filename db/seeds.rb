@@ -31,6 +31,16 @@ user_spot_one = [
     description: "Relaxed, lodge-chic chain serving global comfort fare, including stir-fries, pot roast & pastas.",
     image:"https://i.ytimg.com/vi/-paNTBJMcO0/maxresdefault.jpg",
     category: "Resturaunt"
+  },
+  {
+    name: "Station Tavern",
+    street: "2204 Fern St",
+    city: "San Diego",
+    state: "CA",
+    zip: "92104",
+    description: "Open-air, modern beer garden has comfort food, craft beers, outdoor dining & a play area for kids.",
+    image:"https://image.petmd.com/files/petmd-alcohol-risks.jpg",
+    category: "Bar"
   }
   
 ]
@@ -55,6 +65,16 @@ user_spot_two = [
         description: "The Original Dog Beach is wide and sandy, with a lot of space for pups to play and swim. It's one of the most popular off-leash dog beaches in San Diego as there are no hourly restrictions. The off-leash area can be found in the northern part, where the sand meets the mouth of the San Diego River.",
         image:"https://www.akc.org/wp-content/uploads/2017/08/Golden-Retriever-fetching-a-ball-on-the-beach-500x485.jpeg",
         category: "Beach"
+      },
+      {
+        name: "Morley Field Dog Park",
+        street: "2225 Morley Field Dr",
+        city: "San Diego",
+        state: "CA",
+        zip: "92104",
+        description: "Scenic dog park in a canyon, with adjacent hiking trails & a grassy field for off-leash exploring.",
+        image:"https://www.aacounty.org/sebin/n/m/dogpark.jpg",
+        category: "Park"
       }
     
 ]
