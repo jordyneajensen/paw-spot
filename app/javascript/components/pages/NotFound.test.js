@@ -20,7 +20,7 @@ describe("When NotFound renders", () => {
   })
   it("displays a p tag", () => {
     const notFoundParagraph = notFound.find("p")
-    expect(notFoundParagraph.text()).toEqual("Hey, lets head back and find a place that we both can hang out at!")
+    expect(notFoundParagraph.text()).toEqual("Hey, lets head back and find a place we can hang out at!")
   })
   it("displays a NavLink", () => {
       const notFoundNavLink = notFound.find("NavLink")

@@ -8,8 +8,10 @@ import {
     CardText,
     Button,
   } from "reactstrap";
-import Jordyn from '../../../assets/images/Jordyn.JPG'
+import Jordyn from '../../../assets/images/Jordyn.jpg'
 import William from '../../../assets/images/William'
+import Corey from '../../../assets/images/Corey.jpeg'
+
 
 export default class AboutUs extends Component {
   render() {
@@ -18,11 +20,12 @@ export default class AboutUs extends Component {
         <h1>The Creative Minds Behind Paw Spot</h1>
         <div className='cards-container'>
             <Card className='about-card' style={{ width: '30rem' }}>
-                <CardImg className='aboutus-img'/>
+                <CardImg src={Corey} className='aboutus-img'/>
                 <CardBody>
                     <CardTitle className='about-title'>Corey Arnold</CardTitle>
                     <CardSubtitle className='about-subtitle'>Tech Lead</CardSubtitle>
-                    <CardText className='aboutus-text'>About</CardText>
+                    <CardText>I am a Full-Stack developer looking to contribute to a development team.  I have a passion for creating elegant websites using JavaScript, React, HTML and CSS. It brings me a great sense of accomplishment and pride when I finish part of a project or learn a new skill. I love to learn and try to learn a few new concepts each week.</CardText>
+
                 </CardBody>
                 <Button><a href='https://github.com/arnoldc94' target='_blank' rel='noopener noreferrer'>Github</a></Button>
                 <Button><a href='https://www.linkedin.com/in/corey-arnold-744391207/' target='_blank' rel='noopener noreferrer'>LinkedIn</a></Button>
