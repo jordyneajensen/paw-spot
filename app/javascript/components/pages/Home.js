@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {UncontrolledCarousel, Button} from 'reactstrap'
 import tutorial from '../../../assets/images/paw-spot.gif'
 
+
 class Home extends Component {
     
   render() {
@@ -52,19 +53,20 @@ class Home extends Component {
                     altText: 'Slide 1',
                     caption: 'Slide 1',
                     key: 1,
-                    src: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHVwcHklMjBkb2d8ZW58MHx8MHx8&w=1000&q=80'
+                    src: 'https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80'
                     },
                     {
                     altText: 'Slide 2',
                     caption: 'Slide 2',
                     key: 2,
-                    src: 'https://cf.ltkcdn.net/dogs/images/orig/284954-2121x1414-dog-and-beer.jpg'
+                    src: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
                     },
                     {
                     altText: 'Slide 3',
                     caption: 'Slide 3',
                     key: 3,
-                    src: 'https://humaneheroes.org/wp-content/uploads/2019/09/txhh_best-practices-when-taking-dog-park.png'
+                    src: 'https://images.unsplash.com/photo-1558929996-da64ba858215?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80'
+
                     }
                 ]}
             />

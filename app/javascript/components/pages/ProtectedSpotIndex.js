@@ -19,7 +19,7 @@ class ProtectedSpotIndex extends Component {
                 <Card  className='indexcard-spacing'>
                   <CardImg top width="100%" src={spot.image}  className='indexcardimg-sizing' alt="pet-friendly spot" ></CardImg>
                   <CardBody className='indexcard-text'>
-                    <CardTitle>{spot.name}</CardTitle>
+                    <CardTitle className='pagecard-title'>{spot.name}</CardTitle>
                     <CardSubtitle> {spot.street} {spot.city} {spot.state} {spot.zip} 
                     </CardSubtitle>                   
                     <Button><a href={`/spotshow/${spot.id}`} >More info here</a></Button>     
