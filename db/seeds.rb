@@ -77,7 +77,7 @@ user_spot_two = [
         category: "Park"
       }
     
-]
+
 
 
 
