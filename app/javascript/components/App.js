@@ -10,7 +10,7 @@ import SpotEdit from './pages/SpotEdit'
 import NotFound from './pages/NotFound'
 import ProtectedSpotIndex from './pages/ProtectedSpotIndex'
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Route,
   Switch
 } from 'react-router-dom'
@@ -89,11 +89,10 @@ class App extends React.Component {
     } = this.props
 
     return (
-      <Router>
+      <BrowserRouter>
         <div className="page-container">
           <div className="content-wrap">
             <Header {...this.props}/>
-            <Switch className='content'>
                 <Route exact path="/" render={() => {
                   return <Home logged_in = {logged_in} sign_in_route = {sign_in_route} new_user_route = {new_user_route} />
                 }}  />
@@ -130,11 +129,10 @@ class App extends React.Component {
                 <Route path="/spotaboutus" component={AboutUs}/>
 
                 <Route component={NotFound}/>
-            </Switch>
           </div>
           <Footer />
         </div>
-      </Router>
+      </BrowserRouter>
     );
   }
 }
